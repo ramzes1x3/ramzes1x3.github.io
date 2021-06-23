@@ -1,0 +1,16 @@
+.first{
+    text-align: center;
+    color:blueviolet;
+}
+
+.head {
+    background-color: chocolate;
+    width: 1500px;
+    height: 320px;
+}
+
+.main{
+    background-color: darkcyan;
+    width: 1500px;
+    height: 900px;
+}
