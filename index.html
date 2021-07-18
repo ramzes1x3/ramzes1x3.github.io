@@ -33,9 +33,9 @@
             </div>
         </header>
         <main class = "main">
-            <h1>Главная страница мазагина GLLACY</h1>
+            <h1 class = "visually-hidden">Главная страница мазагина GLLACY</h1>
             <section>
-                <h2>Реклама мороженого</h2>
+                <h2 class = "visually-hidden">Реклама мороженого</h2>
                 <p>Крем-брюле и пломбир с малиновым джемом</p>
                 <div>
                     <button type = "button">Первый слайд</button>
@@ -47,7 +47,7 @@
                 </div>
             </section>
             <section>
-                <h2>Дополнительные вкусности</h2>
+                <h2 class = "visually-hidden">Дополнительные вкусности</h2>
                 <article>
                     <h3>Малинка даром!</h3>
                     <p>При покупке 2 кг любого фруктового мороженого, добавим <br>
@@ -66,7 +66,7 @@
                 </article>
             </section>
             <section>
-                <h2>Ассортимент</h2>
+                <h2 class = "visually-hidden">Ассортимент</h2>
                 <ul>
                     <li>
                         <img src = "img/hit.svg" width = "50" height = "50" alt = "Хит">
@@ -140,7 +140,7 @@
                 </ul>
             </section>
             <section>
-                <h2>Это интересно и полезно</h2>
+                <h2 class = "visually-hidden">Это интересно и полезно</h2>
                 <article>
                     <h3>Новое в нашем блоге</h3>
                     <p>
@@ -157,7 +157,7 @@
                 </div>
             </section>
             <section class = "map">
-                <h2>Карта</h2>
+                <h2 class = "visually-hidden">Карта</h2>
                 <p>Картинка с мороженым</p>
                 <div>
                     <p>
@@ -178,29 +178,20 @@
         <footer class = "footer">
             <ul>
                 <li>
-                    <a href = "#">
-                        <img src = "img/twitter.svg" alt = "Твиттер">
-                    </a>
+                    <a href = "https://twitter.com/" aria-label = "Твиттер"></a>
                 </li>
                 <li>
-                    <a href = "#">
-                        <img src = "img/instagram.svg" alt = "Инстаграм">
-                    </a>
+                    <a href = "https://instagram.com/" aria-label = "Инстаграм"></a>
                 </li>
                 <li>
-                    <a href = "#">
-                        <img src = "img/fb.svg" alt = "Фейсбук">
-                    </a>
+                    <a href = "https://facebook.com/" aria-label = "Фейсбук"></a>
                 </li>
                 <li>
-                    <a href = "#">
-                        <img src = "img/vk.svg" alt = "ВК">
-                    </a>
+                    <a href = "https://vk.com/" aria-label = "Вконтакте"></a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <img src = "img/heart.svg" alt = "Сердечко">
                     <a href = "#"><b>Для поставщиков</b></a>
                 </li>
                 <li>
@@ -222,15 +213,15 @@
         </footer>
 
         <section class = "lk">
-            <h2>Вход в личный кабинет</h2>
+            <h2 class = "visually-hidden">Вход в личный кабинет</h2>
             <form method = "POST" action = "index.html">
                 <p>
-                    <label for = "user_login"></label>
+                    <label class = "visually-hidden" for = "user_login">Логин</label>
                     <input id = "user_login" type = "email" name = "login"
                         placeholder = "mail@example.com">
                 </p>
                 <p>
-                    <label for = "user_password"></label>
+                    <label class = "visually-hidden" for = "user_password">Пароль</label>
                     <input id = "user_password" type = "password" name = "password"
                         placeholder = "********">
                 </p>
@@ -240,10 +231,12 @@
             <p><a href = "#">Новая реистрация</a></p>
         </section>
         <section class = "box">
-            <h2>Корзина</h2>
+            <h2 class = "visually-hidden">Корзина</h2>
             <ul>
+                <button type = "button">Удалить</button>
                 <li><img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "30" height = "30">
                 Пломбир с апельсиновым джемом 1,5 кг x 200 руб. <p>300 руб.</p></li>
+                <button type = "button">Удалить</button>
                 <li><img src = "img/3.webp" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "30" height = "30">
                 Клубничный пломбир с присыпкой из белого шоколада 1,5 кг x 200 руб. <p>450 руб.</p></li>
             </ul>
@@ -251,34 +244,35 @@
             <button type = "button">Оформить заказ</button>
         </section>
         <section class = "search">
-            <h2>Поиск</h2>
-            <label for = "search"></label>
-            <input id = "search" name = "search" placeholder = "Крем-брюле" type = "text">
+            <h2 class = "visually-hidden">Поиск</h2>
+            <label class = "visually-hidden" for = "search">Поиск</label>
+            <input id = "search" name = "search" placeholder = "Крем-брюле" type = "search">
         </section>
         <section class = "feedback">
-            <h2>Обратная связь</h2>
+            <h2 class = "visually-hidden">Обратная связь</h2>
             <p>Мы обязательно вам ответим!</p>
             <form method = "POST" action = "index.html">
                 <p>
-                    <label for = "user_name"></label>
+                    <label class = "visually-hidden" for = "user_name">Ваше имя и фамилия</label>
                     <input id = "user_name" name = "user_name" type = "text"
                         placeholder = "Имя Фамилия">
                 </p>
                 <p>
-                    <label for = "user_email"></label>
+                    <label class = "visually-hidden" for = "user_email">Ваш имейл адрес</label>
                     <input id = "user_email" name = "email" type = "email"
                         placeholder = "email@example.com">
                 </p>
                 <p>
-                    <label for = "about_user"></label>
+                    <label class = "visually-hidden" for = "about_user">Расскажите о себе</label>
                     <input id = "about_user" name = "about_user" type = "text"
                         placeholder = "В свободной форме">
                 </p>
                 <button type = "submit">Отправить</button>
             </form>
+            <button type = "button">Закрыть</button>
         </section>
         <section>
-            <h2>Главное меню из каталога</h2>
+            <h2 class = "visually-hidden">Главное меню из каталога</h2>
             <ul>
                 <li><a href = "#">Новинки</a></li>
                 <li><a href = "#">Сливочное</a></li>
