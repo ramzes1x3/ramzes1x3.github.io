@@ -2,7 +2,7 @@
 <html lang = "ru">
     <head>
         <meta charset = "utf-8">
-        <meta name = "viewport" content = "width=device-width">
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
         <meta name = "description" content = "Вкусное мороженое">
         <link rel = "icon" href = "img/favicon.ico" type = "image/x-icon">
         <link rel = "stylesheet" href = "/css/index.css">
@@ -70,7 +70,7 @@
                 <ul>
                     <li>
                         <img src = "img/hit.svg" width = "50" height = "50" alt = "Хит">
-                        <img src = "img/index_orange.png" alt = "Сливочное с апельсиовым
+                        <img src = "img/1.webp" alt = "Сливочное с апельсиовым
                             джемом и цитрусовой стружкой" width = "200" height = "200">
                         <p>310</p>
                         <p>/кг</p>
@@ -81,7 +81,7 @@
                     </li>
                     <li>
                         <img src = "img/hit.svg" width = "50" height = "50" alt = "Хит">
-                        <img src = "img/index_choco.png" alt = "Сливочно-кофейное с кусочками
+                        <img src = "img/2.webp" alt = "Сливочно-кофейное с кусочками
                             шоколада" width = "200" height = "200">
                         <p>380</p>
                         <p>/кг</p>
@@ -92,7 +92,7 @@
                     </li>
                     <li>
                         <img src = "img/hit.svg" width = "50" height = "50" alt = "Хит">
-                        <img src = "img/index_strawberry.png" alt = "Сливочно-клубничное с
+                        <img src = "img/3.webp" alt = "Сливочно-клубничное с
                             присыпкой из белого шоколада" width = "200" height = "200">
                         <p>355</p>
                         <p>/кг</p>
@@ -103,7 +103,7 @@
                     </li>
                     <li>
                         <img src = "img/hit.svg" width = "50" height = "50" alt = "Хит">
-                        <img src = "img/index_cream.png" alt = "Сливочное крем-брюле с
+                        <img src = "img/4.webp" alt = "Сливочное крем-брюле с
                             карамельной подливкой" width = "200" height = "200">
                         <p>415</p>
                         <p>/кг</p>
@@ -223,29 +223,59 @@
 
         <section class = "lk">
             <h2>Вход в личный кабинет</h2>
-            <p>Введите свой логин и пароль</p>
-            <!--здесь будет форма-->
-            <div>
-                <a href = "#">Войти</a>
-            </div>
+            <form method = "POST" action = "index.html">
+                <p>
+                    <label for = "user_login"></label>
+                    <input id = "user_login" type = "email" name = "login"
+                        placeholder = "mail@example.com">
+                </p>
+                <p>
+                    <label for = "user_password"></label>
+                    <input id = "user_password" type = "password" name = "password"
+                        placeholder = "********">
+                </p>
+                <button type = "submit">Войти</button>
+            </form>
             <p><a href = "#">Забыли пароль?</a></p>
             <p><a href = "#">Новая реистрация</a></p>
         </section>
         <section class = "box">
             <h2>Корзина</h2>
             <ul>
-                <li><img src = "img/1.png" alt = "Пломбир с апильсновым джемом" width = "30" height = "30">
+                <li><img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "30" height = "30">
                 Пломбир с апельсиновым джемом 1,5 кг x 200 руб. <p>300 руб.</p></li>
-                <li><img src = "img/2.png" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "30" height = "30">
+                <li><img src = "img/3.webp" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "30" height = "30">
                 Клубничный пломбир с присыпкой из белого шоколада 1,5 кг x 200 руб. <p>450 руб.</p></li>
             </ul>
+            <p>Итого: 750 руб.</p>
+            <button type = "button">Оформить заказ</button>
         </section>
         <section class = "search">
             <h2>Поиск</h2>
+            <label for = "search"></label>
+            <input id = "search" name = "search" placeholder = "Крем-брюле" type = "text">
         </section>
         <section class = "feedback">
             <h2>Обратная связь</h2>
-            <!--форма обратной связи-->
+            <p>Мы обязательно вам ответим!</p>
+            <form method = "POST" action = "index.html">
+                <p>
+                    <label for = "user_name"></label>
+                    <input id = "user_name" name = "user_name" type = "text"
+                        placeholder = "Имя Фамилия">
+                </p>
+                <p>
+                    <label for = "user_email"></label>
+                    <input id = "user_email" name = "email" type = "email"
+                        placeholder = "email@example.com">
+                </p>
+                <p>
+                    <label for = "about_user"></label>
+                    <input id = "about_user" name = "about_user" type = "text"
+                        placeholder = "В свободной форме">
+                </p>
+                <button type = "submit">Отправить</button>
+            </form>
         </section>
         <section>
             <h2>Главное меню из каталога</h2>
