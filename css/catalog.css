@@ -9,12 +9,10 @@
     overflow: hidden;
 }
 
-.head{
-    background-color: blueviolet;
+body {
+    margin: 0
 }
 
-.main{
-    background-color: burlywood;
-    height: auto;
-    width: auto;
-}
+a {
+    text-decoration: none;
+}/* убирае нижнее подчеркивание у ссылок*/

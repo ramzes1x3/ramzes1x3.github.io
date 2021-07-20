@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 .visually-hidden{
     position: absolute;
     width: 1px;
@@ -9,27 +11,21 @@
     overflow: hidden;
 }
 
-.first{
-    text-align: center;
-    color:blueviolet;
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Roboto", Arial, sans-serif;
+    line-height: 18px;
+    font-weight: 700;
+    color: #ffffff;
+
+    background-color: #849d8f;
+    background-image: url(/img/fon1.png);
+    background-position: top center;
+    background-repeat: no-repeat;
 }
 
-.head {
-    background-color: chocolate;
-}
-
-.main{
-    background-color: darkcyan;
-}
-
-.footer{
-    background-color: rgb(0, 139, 23);
-}
-
-.lk {
-    background-color: cornsilk;
-}
-
-.box{
-    background-color: #f12;
-} 
+a {
+    text-decoration: none;
+}/* убирае нижнее подчеркивание у ссылок*/
