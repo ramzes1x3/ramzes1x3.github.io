@@ -10,27 +10,36 @@
         <title>GLLACY</title>
     </head>
     <body>
-        <header class = "head">
-            <div>
+        <header class = "main-header">
+            <div class = "logo">
                 <a href = "#">
-                    <img src = "img/logo.svg" width = "300" height = "100" alt = "Логотип GLLACY">
+                    <img src = "img/logo.svg" width = "154" height = "64" alt = "Логотип GLLACY">
                 </a>
             </div>
-            <nav>
-                <ul>
-                    <li><button type = "button">Каталог</button></li>
-                    <li><a href ="#">Доставка и оплата</a></li>
-                    <li><a href = "#">О Компании</a></li>
+            <nav class = "main-navigation">
+                <ul class = "main-navigation-list">
+                    <li class = "main-navigation-item">
+                        <a href = "#">Каталог</a>
+                        <ul class = "catalog-navigation-list">
+                            <li class = "catalog-navigation-new"><a href = "#">Новинки</a></li>
+                            <li class = "catalog-navigation-item"><a href = "catalog.html">Сливочное</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Щербеты</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Фруктовый лед</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Мелорин</a></li>
+                        </ul>
+                    </li>
+                    <li class = "main-navigation-item"><a href ="#">Доставка и оплата</a></li>
+                    <li class = "main-navigation-item"><a href = "#">О Компании</a></li>
                 </ul>
             </nav>
-            <div>
-                <ul>
-                    <li><button type = "button">Поиск</button></li>
-                    <li><button type = "button">Вход</button></li>
-                    <li><button type = "button">Корзина</button></li>
+            <div class = "user-navigation">
+                <ul class = "user-navigation-list">
+                    <li class = "user-navigation-item"><button class = "button" class = "button" type = "button">Поиск</button></li>
+                    <li class = "user-navigation-item"><button class = "button" type = "button">Вход</button></li>
+                    <li class = "user-navigation-item"><button class = "button" type = "button">Корзина</button></li>
                 </ul>
-                <p>С 10 до 20, ежедневно</p>
-                <p>8 812 450-25-25</p>
+                <p class = "header-work-time">С 10 до 20, ежедневно</p>
+                <p class = "header-phone-number">8 812 450-25-25</p>
             </div>
         </header>
         <main class = "main">

@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-.visually-hidden{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -26,6 +15,79 @@ body {
     background-repeat: no-repeat;
 }
 
-a {
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.button {
+    color: #ffffff;
+    background-color:chocolate;/*удалить потом*/
+}
+
+.a {
+    color: inherit;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.logo {
+    width: 154px;
+    height: 64px;
+    margin: 0 24px 2px 0;
+}
+
+.main-navigation {
+    font-size: 16px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.main-navigation a{
+    color: inherit;
+}
+
+.catalog-navigation-list{
+    background-color: #f8f7f4;
+
+    color: #323232;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.catalog-navigation-list a{
     text-decoration: none;
-}/* убирае нижнее подчеркивание у ссылок*/
+}
+
+.catalog-navigation-list .catalog-navigation-new{
+    font-weight: 700;
+}
+
+.user-navigation-list{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.header-work-time {
+    text-align: right;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.header-phone-number{
+    text-align: right;
+    font-size: 22px;
+    line-height: 24px;
+}

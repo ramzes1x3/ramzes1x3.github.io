@@ -10,27 +10,36 @@
         <title>GLLACY</title>
     </head>
     <body>
-        <header class = "head">
-            <div>
+        <header class = "main-header">
+            <div class = "logo">
                 <a href = "#">
-                    <img src = "img/logo.svg" width = "300" height = "100" alt = "Логотип GLLACY">
+                    <img src = "img/logo.svg" width = "154" height = "64" alt = "Логотип GLLACY">
                 </a>
             </div>
-            <nav>
-                <ul>
-                    <li><button type = "button">Каталог</button></li>
-                    <li><a href ="#">Доставка и оплата</a></li>
-                    <li><a href = "#">О Компании</a></li>
+            <nav class = "main-navigation">
+                <ul class = "main-navigation-list">
+                    <li class = "main-navigation-item">
+                        <a href = "#">Каталог</a>
+                        <ul class = "catalog-navigation-list">
+                            <li class = "catalog-navigation-new"><a href = "#">Новинки</a></li>
+                            <li class = "catalog-navigation-item"><a href = "catalog.html">Сливочное</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Щербеты</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Фруктовый лед</a></li>
+                            <li class = "catalog-navigation-item"><a href = "#">Мелорин</a></li>
+                        </ul>
+                    </li>
+                    <li class = "main-navigation-item"><a href ="#">Доставка и оплата</a></li>
+                    <li class = "main-navigation-item"><a href = "#">О Компании</a></li>
                 </ul>
             </nav>
-            <div>
-                <ul>
-                    <li><button type = "button">Поиск</button></li>
-                    <li><button type = "button">Вход</button></li>
-                    <li><button type = "button">Корзина</button></li>
+            <div class = "user-navigation">
+                <ul class = "user-navigation-list">
+                    <li class = "user-navigation-item"><button class = "button" class = "button" type = "button">Поиск</button></li>
+                    <li class = "user-navigation-item"><button class = "button" type = "button">Вход</button></li>
+                    <li class = "user-navigation-item"><button class = "button" type = "button">Корзина</button></li>
                 </ul>
-                <p>С 10 до 20, ежедневно</p>
-                <p>8 812 450-25-25</p>
+                <p class = "header-work-time">С 10 до 20, ежедневно</p>
+                <p class = "header-phone-number">8 812 450-25-25</p>
             </div>
         </header>
         <main class = "main">
@@ -39,12 +48,12 @@
                 <h2 class = "visually-hidden">Реклама мороженого</h2>
                 <p>Крем-брюле и пломбир с малиновым джемом</p>
                 <div>
-                    <button type = "button">Первый слайд</button>
-                    <button type = "button">Второй слайд</button>
-                    <button type = "button">Третий слайд</button>
+                    <button class = "button" type = "button">Первый слайд</button>
+                    <button class = "button" type = "button">Второй слайд</button>
+                    <button class = "button" type = "button">Третий слайд</button>
                 </div>
                 <div>
-                    <button type = "button">Давайте оба!</button>
+                    <button class = "button" type = "button">Давайте оба!</button>
                 </div>
             </section>
             <section>
@@ -150,7 +159,7 @@
                     всего самого вкусного, что у нас происходит. Обещаем не<br>
                     спамить и не слать всякой ненужной ерунды. Честно =)</p>
                     <input type = "text">
-                    <button type = "button">Отправить</button>
+                    <button class = "button" type = "button">Отправить</button>
                 </div>
             </section>
             <section class = "map">
@@ -168,7 +177,7 @@
                         <i>8 812 450-25-25</i><br>
                         (с 10 до 20 ежедневно)
                     </p>
-                    <button type = "button">Форма обратной связи</button>
+                    <button class = "button" type = "button">Форма обратной связи</button>
                 </div>
             </section>
         </main>
@@ -222,7 +231,7 @@
                     <input id = "user_password" type = "password" name = "password"
                         placeholder = "********">
                 </p>
-                <button type = "submit">Войти</button>
+                <button class = "button" type = "submit">Войти</button>
             </form>
             <p><a href = "#">Забыли пароль?</a></p>
             <p><a href = "#">Новая реистрация</a></p>
@@ -231,18 +240,18 @@
             <h2 class = "visually-hidden">Корзина</h2>
             <ul>
                 <li>
-                    <button type = "button">Удалить</button>
+                    <button class = "button" type = "button">Удалить</button>
                     <img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "30" height = "30">
                         Пломбир с апельсиновым джемом 1,5 кг x 200 руб. <p>300 руб.</p>
                 </li>
                 <li>
-                    <button type = "button">Удалить</button>
+                    <button class = "button" type = "button">Удалить</button>
                     <img src = "img/3.webp" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "30" height = "30">
                         Клубничный пломбир с присыпкой из белого шоколада 1,5 кг x 200 руб. <p>450 руб.</p>
                 </li>
             </ul>
             <p>Итого: 750 руб.</p>
-            <button type = "button">Оформить заказ</button>
+            <button class = "button" type = "button">Оформить заказ</button>
         </section>
         <section class = "search">
             <h2 class = "visually-hidden">Поиск</h2>
@@ -268,9 +277,9 @@
                     <input id = "about_user" name = "about_user" type = "text"
                         placeholder = "В свободной форме">
                 </p>
-                <button type = "submit">Отправить</button>
+                <button class = "button" type = "submit">Отправить</button>
             </form>
-            <button type = "button">Закрыть</button>
+            <button class = "button" type = "button">Закрыть</button>
         </section>
         <section>
             <h2 class = "visually-hidden">Главное меню из каталога</h2>
