@@ -10,7 +10,7 @@ body {
     color: #ffffff;
 
     background-color: #849d8f;
-    background-image: url(/img/fon1.png);
+    background-image: url(/img/general-background-1.png);
     background-position: top center;
     background-repeat: no-repeat;
 }
@@ -41,6 +41,7 @@ ul {
     overflow: hidden;
 }
 
+/*header*/
 .logo {
     width: 154px;
     height: 64px;
@@ -90,4 +91,243 @@ ul {
     text-align: right;
     font-size: 22px;
     line-height: 24px;
+}
+/*header*/
+
+/*main*/
+.advertising-ice-cream{
+    font-size: 60px;
+    line-height: 60.5px;
+    text-align:center;
+}
+
+.advertising-button{
+    font-size: 32px;
+    text-align: center;
+    line-height: 44px;
+}
+
+.raspberry{
+    background-color: brown;
+    background-image: url(/img/raspberry-background.webp);
+}
+
+.raspberry a{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.raspberry-title {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.raspberry-text {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.chocolate{
+    background-color:chocolate;
+    background-image: url(/img/chocolate-background.webp);
+}
+
+.chocolate a{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.chocolate-title {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.chocolate-text {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.assortment-item a{
+    font-size: 16px;
+    text-align: center;
+    line-height: 22px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.assortment-item-weight {
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.assortment-item-kilograms{
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.advantages{
+    background-color: burlywood;
+    background-image: url(/img/waffle-background.webp);
+}
+
+.advantages-title{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #323232;
+}
+
+.advantages-list li{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.blog {
+    background-color: cornsilk;
+    background-image: url(/img/strawberry-background.webp);
+}
+
+.blog-new-title {
+    font-size: 16px;
+    line-height: 22px;
+    color: #323232;
+    font-weight: 500;
+}
+
+.blog-new a{
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+}
+
+.mailing {
+    background-color: cornsilk;
+    background-image: url(/img/mailing-background.png);
+}
+
+.mailing-text {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #5a5a5a;
+}
+
+.address {
+    background-color:darkolivegreen;
+    background-image: url(/img/map-background.png);
+}
+
+.address-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.address-text-bold {
+    font-size: 18px;
+    line-height: 24px;
+    color: #323232;
+    font-weight: 700;
+}
+
+.address-block {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+
+.address-phone {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.address-phone-bold {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    color: #323232;
+}
+/*main*/
+
+/*footer*/
+.about-us-list a{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.about-us-list:first-child a{
+    font-weight: 700;
+}
+
+.copyright{
+    font-size: 12px;
+    text-align: left;
+    line-height: 18px;
+    color: #fefefe;
+    font-weight: 400;
+}
+/*footer*/
+
+/*hidden windows*/
+.personal-account {
+    background-color:floralwhite;
+    background-image: url(/img/mailing-background.png);
+}
+
+.personal-account a{
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.basket {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+
+.basket-list {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.basket-item-text {
+    color: #999999;
+}
+
+.basket-sum{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color:#323232;
+}
+
+.search {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+
+.feedback {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+
+.feedback-text {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #323232;
 }

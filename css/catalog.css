@@ -40,6 +40,7 @@ ul {
     overflow: hidden;
 }
 
+/*header*/
 .logo {
     width: 154px;
     height: 64px;
@@ -90,3 +91,24 @@ ul {
     font-size: 22px;
     line-height: 24px;
 }
+/*header*/
+
+/*footer*/
+.about-us-list a{
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.about-us-list:first-child a{
+    font-weight: 700;
+}
+
+.copyright{
+    font-size: 12px;
+    text-align: left;
+    line-height: 18px;
+    color: #fefefe;
+    font-weight: 400;
+}
+/*footer*/
