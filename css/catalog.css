@@ -112,3 +112,45 @@ ul {
     font-weight: 400;
 }
 /*footer*/
+
+/*hidden windows*/
+.personal-account {
+    background-color:floralwhite;
+    background-image: url(/img/mailing-background.png);
+}
+
+.personal-account a{
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.basket {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+
+.basket-list {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.basket-item-text {
+    color: #999999;
+}
+
+.basket-sum{
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+    color:#323232;
+}
+
+.search {
+    background-color:darksalmon;
+    background-image: url(/img/mailing-background.png);
+}
+/*hidden windows*/

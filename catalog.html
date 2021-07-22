@@ -266,46 +266,48 @@
                 <p class = "copyright">Сделано в HTML Academy © 2019</p>
             </div>
         </footer>
-        <section class = "lk">
+
+        <section class = "personal-account">
             <h2 class = "visually-hidden">Вход в личный кабинет</h2>
             <form method = "POST" action = "index.html">
-                <p>
+                <p class = "personal-account-login">
                     <label class = "visually-hidden" for = "user_login">Логин</label>
                     <input id = "user_login" type = "email" name = "login"
                         placeholder = "mail@example.com">
                 </p>
-                <p>
+                <p class = "personal-account-password">
                     <label class = "visually-hidden" for = "user_password">Пароль</label>
                     <input id = "user_password" type = "password" name = "password"
                         placeholder = "********">
                 </p>
-                <button type = "submit">Войти</button>
+                <button class = "button" type = "submit">Войти</button>
             </form>
-            <p><a href = "#">Забыли пароль?</a></p>
-            <p><a href = "#">Новая реистрация</a></p>
+            <a href = "#">Забыли пароль?</a>
+            <a href = "#">Новая регистрация</a>
         </section>
-        <section class = "box">
+        <section class = "basket">
             <h2 class = "visually-hidden">Корзина</h2>
-            <ul>
-                <li>
-                    <button type = "button">Удалить</button>
-                    <img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "30" height = "30">
-                        Пломбир с апельсиновым джемом 1,5 кг x 200 руб. <p>300 руб.</p>
+            <ul class = "basket-list">
+                <li class = "basket-item">
+                    <button class = "button" type = "button">Удалить</button>
+                    <img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "33" height = "33">
+                        Пломбир с апельсиновым джемом 1,5 кг x <span class = "basket-item-text">200 руб.</span> 300 руб.
                 </li>
-                <li>
-                    <button type = "button">Удалить</button>
-                    <img src = "img/3.webp" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "30" height = "30">
-                        Клубничный пломбир с присыпкой из белого шоколада 1,5 кг x 200 руб. <p>450 руб.</p>
+                <li class = "basket-item">
+                    <button class = "button" type = "button">Удалить</button>
+                    <img src = "img/3.webp" alt = "Клубничный пломбир с присыпкой из белого шоколада" width = "33" height = "33">
+                        Клубничный пломбир с присыпкой из белого шоколада 1,5 кг x <span class = "basket-item-text">300 руб.</span> 450 руб.
                 </li>
             </ul>
-            <p>Итого: 750 руб.</p>
-            <button type = "button">Оформить заказ</button>
+            <p class = "basket-sum">Итого: 750 руб.</p>
+            <button class = "button" type = "button">Оформить заказ</button>
         </section>
         <section class = "search">
             <h2 class = "visually-hidden">Поиск</h2>
             <label class = "visually-hidden" for = "search">Поиск</label>
             <input id = "search" name = "search" placeholder = "Крем-брюле" type = "search">
         </section>
+        
         <script src = "js/script.js"></script>
     </body>
 </html>
