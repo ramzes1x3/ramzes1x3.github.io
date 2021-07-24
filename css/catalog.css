@@ -93,6 +93,73 @@ ul {
 }
 /*header*/
 
+/*main*/
+.path a{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.sorting-list li{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #323232;
+}
+
+.sorting-form legend{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.fat-content-sorting-list li, .fillers-sorting-list li{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.submit-sorting{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.assortment a{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.assortment .price{
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.assortiment .weight{
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.pagination-list{
+    text-align: right;
+}
+
+.pagination-list li{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+/*main*/
+
 /*footer*/
 .about-us-list a{
     font-size: 13px;

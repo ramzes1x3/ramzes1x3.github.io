@@ -7,7 +7,7 @@
         <link rel = "icon" href = "img/favicon.ico" type = "image/x-icon">
         <link rel = "stylesheet" href = "css/normalize.css">
         <link rel = "stylesheet" href = "/css/catalog.css">
-        <title>GLLACY</title>
+        <title>GLLACY_catalog</title>
     </head>
     <body>
         <header class = "main-header">
@@ -43,56 +43,66 @@
             </div>
         </header>
         <main class = "main">
-            <p><a href = "index.html">Главная  >></a>
+            <p class = "path"><a href = "index.html">Главная  >></a>
             <a href = "catalog.html">Каталог  >></a>
             Сливочное</p>
-            <h1>Сливочное мороженое</h1>
-            <form method = "GET" action = "index.html">
-                <fieldset>
-                    <legend>Сортировка:</legend>
-                    <label>
-                        <input id = "priority1" type = "radio" name = "priority"  value = "top" checked>
-                        по популярности
-                    </label>
-                    <label>
-                        <input id = "priority2" type = "radio" name = "priority" value = "poor">
-                        сначала недорогие
-                    </label>
-                    <label>
-                        <input id = "priority3" type = "radio" name = "priority" value = "cheap">
-                        сначала дорогие
-                    </label>
-                    <label>
-                        <input id = "priority4" type = "radio" name = "priority" value = "fat_content">
-                        по жирности
-                    </label>
+            <h1 class = "visually-hidden">Сливочное мороженое</h1>
+            <form method = "GET" action = "index.html" class = "sorting-form">
+                <fieldset class = "sorting">
+                    <legend class = "sorting-title">Сортировка:</legend>
+                    <ul class = "sorting-list">
+                        <li class = "sorting-item">
+                            <label>
+                                <input id = "priority1" type = "radio" name = "priority"  value = "top" checked>
+                                по популярности
+                            </label>
+                        </li>
+                        <li class = "sorting-item">
+                            <label>
+                                <input id = "priority2" type = "radio" name = "priority"  value = "poor">
+                                сначала недорогие
+                            </label>
+                        </li>
+                        <li class = "sorting-item">
+                            <label>
+                                <input id = "priority3" type = "radio" name = "priority" value = "cheap">
+                                сначала дорогие
+                            </label>
+                        </li>
+                        <li class = "sorting-item">
+                            <label>
+                                <input id = "priority4" type = "radio" name = "priority" value = "fat_content">
+                                по жирности
+                            </label>
+                        </li>
+                    </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class = "price-sorting">
                     <legend>Цена: 100 руб. - 500 руб.</legend>
                     <input id = "price" type = "range" name = "price">
                 </fieldset>
-                <fieldset>
+                <fieldset class = "fat-content-sorting">
                     <legend>Жирность:</legend>
-                    <ul>
-                        <li>
+                    <ul class = "fat-content-sorting-list">
+                        <li class = "fat-content-sorting-item">
                             <label>
                                 <input id = "0" name = "fat" type = "radio" value = "0">
                                 0%
                             </label>
                         </li>
-                        <li>
+                        <li class = "fat-content-sorting-item">
                             <label>
                                 <input id = "10" name = "fat" type = "radio" value = "10" checked>
                                 до 10%
                             </label>
                         </li>
-                        <li>
+                        <li class = "fat-content-sorting-item">
                             <label>
                                 <input id = "30" name = "fat" type = "radio" value = "30">
                                 до 30%
                             </label>
                         </li>
-                        <li>
+                        <li class = "fat-content-sorting-item">
                             <label>
                                 <input id = "30+" name = "fat" type = "radio" value = "30+">
                                 выше 30%
@@ -100,34 +110,34 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class = "fillers-sorting">
                     <legend>Наполнители:</legend>
-                    <ul>
-                        <li>
+                    <ul class = "fillers-sorting-list">
+                        <li class = "fillers-sorting-item">
                             <label>
                                 <input id = "chocolate" type = "checkbox" name = "chocolate" checked>
                                 шоколадные
                             </label>
                         </li>
-                        <li>
+                        <li class = "fillers-sorting-item">
                             <label>
                                 <input id = "sugar" type = "checkbox" name = "sugar" checked>
                                 сахарные присыпки
                             </label>
                         </li>
-                        <li>
+                        <li class = "fillers-sorting-item">
                             <label>
                                 <input id = "fruits" type = "checkbox" name = "fruits">
                                 фрукты
                             </label>
                         </li>
-                        <li>
+                        <li class = "fillers-sorting-item">
                             <label>
                                 <input id = "syrups" type = "checkbox" name = "syrups">
                                 сиропы
                             </label>
                         </li>
-                        <li>
+                        <li class = "fillers-sorting-item">
                             <label>
                                 <input id = "jams" type = "checkbox" name = "jams">
                                 джемы
@@ -135,99 +145,97 @@
                         </li>
                     </ul>
                 </fieldset>
-                <button type = "submit">применить</button>
+                <button class = "submit-sorting" type = "submit">применить</button>
             </form>
-            <section>
+            <section class = "assortment">
                 <h2 class = "visually-hidden">Ассортимент</h2>
-                <div>
-                    <article>
+                <div class = "block-first">
+                    <article class = "orange-ice">
                         <h3 class = "visually-hidden">Апельсиновое</h3>
                         <img src = "img/1.webp" alt = "Сливочное с апельсиновым
-                        джемом и цитрусовой стружкой" width = "200" height = "200">
-                        <p>310<span>/кг</span></p>
-                        <div><a href = "#">Сливочное с апельсиновым<br>
-                        джемом и цитрусовой стружкой</a></div>
+                        джемом и цитрусовой стружкой" width = "267" height = "267">
+                        <p class = "price">310<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное с апельсиновым<br>
+                        джемом и цитрусовой стружкой</a>
                     </article>
-                    <article>
+                    <article сlass = "chocolate-ice">
                         <h3 class = "visually-hidden">Шоколадное</h3>
-                        <img src = "img/2.webp" alt = "Сливочно-кофейное с кусочками шоколада" width = "200" height = "200">
-                        <p>380<span>/кг</span></p>
-                        <div><a href = "#">Сливочно-кофейное с кусочками <br>шоколада</a></div>
+                        <img src = "img/2.webp" alt = "Сливочно-кофейное с кусочками шоколада" width = "267" height = "267">
+                        <p class = "price">380<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочно-кофейное с кусочками <br>шоколада</a>
                     </article>
-                    <article>
+                    <article class = "strawberry-ice">
                         <h3 class = "visually-hidden">Клубничное</h3>
-                        <img src = "img/3.webp" alt = "Сливочно-клубничное с присыпкой из белого шоколада" width = "200" height = "200">
-                        <p>355<span>/кг</span></p>
-                        <div><a href = "#">Сливочно-клубничное с <br>присыпкой из белого шоколада</a></div>
+                        <img src = "img/3.webp" alt = "Сливочно-клубничное с присыпкой из белого шоколада" width = "267" height = "267">
+                        <p class = "price">355<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочно-клубничное с <br>присыпкой из белого шоколада</a>
                     </article>
-                    <article>
+                    <article class = "creme-brulee-ice">
                         <h3 class = "visually-hidden">Крем-брюле</h3>
-                        <img src = "img/4.webp" alt = "Сливочное крем-брюле с карамельной подливкой" width = "200" height = "200">
-                        <p>415<span>/кг</span></p>
-                        <div><a href = "#">Сливочное крем-брюле с <br>карамельной подливкой</a></div>
+                        <img src = "img/4.webp" alt = "Сливочное крем-брюле с карамельной подливкой" width = "267" height = "267">
+                        <p class = "price">415<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное крем-брюле с <br>карамельной подливкой</a>
                     </article>
                 </div>
-                <div>
-                    <article>
+                <div class = "block-two">
+                    <article class ="lingonberry-ice">
                         <h3 class = "visually-hidden">Брусника</h3>
-                        <img src = "img/21.webp" alt = "Сливочное с брусничным джемом" width = "200" height = "200">
-                        <p>325<span>/кг</span></p>
-                        <div><a href = "#">Сливочное с брусничным<br> джемом</a></div>
+                        <img src = "img/21.webp" alt = "Сливочное с брусничным джемом" width = "267" height = "267">
+                        <p class = "price">325<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное с брусничным<br> джемом</a>
                     </article>
-                    <article>
+                    <article class ="blueberries-ice">
                         <h3 class = "visually-hidden">Черника</h3>
-                        <img src = "img/22.webp" alt = "Сливочно-черничное с цельными ягодами черники" width = "200" height = "200">
-                        <p>410<span>/кг</span></p>
-                        <div><a href = "#">Сливочно-черничное с цельными<br> ягодами черники</a></div>
+                        <img src = "img/22.webp" alt = "Сливочно-черничное с цельными ягодами черники" width = "267" height = "267">
+                        <p class = "price">410<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочно-черничное с цельными<br> ягодами черники</a>
                     </article>
-                    <article>
+                    <article class ="lemon-ice">
                         <h3 class = "visually-hidden">Лимон и карамель</h3>
-                        <img src = "img/23.webp" alt = "Сливочно-лимонное с карамельной присыпкой" width = "200" height = "200">
-                        <p>375<span>/кг</span></p>
-                        <div><a href = "#">Сливочно-лимонное с <br>карамельной присыпкой</a></div>
+                        <img src = "img/23.webp" alt = "Сливочно-лимонное с карамельной присыпкой" width = "267" height = "267">
+                        <p class = "price">375<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочно-лимонное с <br>карамельной присыпкой</a>
                     </article>
-                    <article>
+                    <article class = "chocolate-chips-ice">
                         <h3 class = "visually-hidden">Шоколадная стружка</h3>
-                        <img src = "img/24.webp" alt = "Сливочное с шоколадной стружкой" width = "200" height = "200">
-                        <p>320<span>/кг</span></p>
-                        <div><a href = "#">Сливочное с шоколадной <br>стружкой</a></div>
+                        <img src = "img/24.webp" alt = "Сливочное с шоколадной стружкой" width = "267" height = "267">
+                        <p class = "price">320<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное с шоколадной <br>стружкой</a>
                     </article>
                 </div>
-                <div>
-                    <article>
+                <div class = "block-three">
+                    <article class = "vanilla-ice">
                         <h3 class = "visually-hidden">Ванильное</h3>
-                        <img src = "img/31.webp" alt = "Сливочно-ванильное с кусочками шоколада" width = "200" height = "200">
-                        <p>440<span>/кг</span></p>
-                        <div><a href = "#">Сливочно-ванильное с <br>кусочками шоколада</a></div>
+                        <img src = "img/31.webp" alt = "Сливочно-ванильное с кусочками шоколада" width = "267" height = "267">
+                        <p class = "price">440<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочно-ванильное с <br>кусочками шоколада</a>
                     </article>
-                    <article>
+                    <article class = "menthol-ice">
                         <h3 class = "visually-hidden">Ментоловое</h3>
-                        <img src = "img/32.webp" alt = "Сливочноe с ментоловым сиропом" width = "200" height = "200">
-                        <p>435<span>/кг</span></p>
-                        <div><a href = "#">Сливочноe с ментоловым <br>сиропом</a></div>
+                        <img src = "img/32.webp" alt = "Сливочноe с ментоловым сиропом" width = "267" height = "267">
+                        <p class = "price">435<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочноe с ментоловым <br>сиропом</a>
                     </article>
-                    <article>
+                    <article class = "dark-chocolate-ice">
                         <h3 class = "visually-hidden">Черный шоколад</h3>
-                        <img src = "img/33.webp" alt = "Сливочное с кусочками черного шоколада" width = "200" height = "200">
-                        <p>355<span>/кг</span></p>
-                        <div><a href = "#">Сливочное с кусочками черного<br> шоколада</a></div>
+                        <img src = "img/33.webp" alt = "Сливочное с кусочками черного шоколада" width = "267" height = "267">
+                        <p class = "price">355<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное с кусочками черного<br> шоколада</a>
                     </article>
-                    <article>
+                    <article class = "mint-ice">
                         <h3 class = "visually-hidden">Мятное</h3>
-                        <img src = "img/34.webp" alt = "Сливочное с мятным сиропом" width = "200" height = "200">
-                        <p>420<span>/кг</span></p>
-                        <div><a href = "#">Сливочное с мятным сиропом</a></div>
+                        <img src = "img/34.webp" alt = "Сливочное с мятным сиропом" width = "267" height = "267">
+                        <p class = "price">420<span class = "weight">/кг</span></p>
+                        <a href = "#">Сливочное с мятным сиропом</a>
                     </article>
                 </div>
-                <div>
-                    <ul class = "Pagination">
-                        <li><button type = "button">1</button></li>
-                        <li><button type = "button">2</button></li>
-                        <li><button type = "button">3</button></li>
-                        <li><button type = "button">4</button></li>
-                        <li><button type = "button">5</button></li>
-                    </ul>
-                </div>
+                <ul class = "pagination-list">
+                    <li class = "pagination-item"><button class = "pagination-button" type = "button">1</button></li>
+                    <li class = "pagination-item"><button class = "pagination-button" type = "button">2</button></li>
+                    <li class = "pagination-item"><button class = "pagination-button" type = "button">3</button></li>
+                    <li class = "pagination-item"><button class = "pagination-button" type = "button">4</button></li>
+                    <li class = "pagination-item"><button class = "pagination-button" type = "button">5</button></li>
+                </ul>
             </section>
         </main>
         <footer class = "footer">
@@ -291,7 +299,7 @@
                 <li class = "basket-item">
                     <button class = "button" type = "button">Удалить</button>
                     <img src = "img/1.webp" alt = "Пломбир с апельсиновым джемом" width = "33" height = "33">
-                        Пломбир с апельсиновым джемом 1,5 кг x <span class = "basket-item-text">200 руб.</span> 300 руб.
+                        Пломбир с апельсиновым джемом 1,5 кг x <span class = "basket-item-text">267 руб.</span> 300 руб.
                 </li>
                 <li class = "basket-item">
                     <button class = "button" type = "button">Удалить</button>
