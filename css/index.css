@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -41,6 +45,7 @@ ul {
     overflow: hidden;
 }
 
+/*text*/
 /*header*/
 .logo {
     width: 154px;
@@ -332,3 +337,84 @@ ul {
     color: #323232;
 }
 /*hidden windows*/
+/*text*/
+
+/*flex*/
+.content{
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header-navigation-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 284px;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container-logo{
+    margin-right: 24px;
+}
+
+.nav-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main-navigation-list{
+    display: flex;
+    width: 348px;
+    justify-content: space-between;
+}
+
+.user-navigation-list{
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+}
+
+
+.wrapper-advertising{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advertising-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.advertising-button{
+    width: 263px;
+    height: 64px;
+}
+
+.button-advertising-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.fon-slider{
+    position: absolute;
+}
+/*flex*/
+
+
+
+
+.main-navigation-item ul{
+    display: none;
+    position:absolute
+}
