@@ -27,6 +27,7 @@ ul {
 .button {
     color: #ffffff;
     background-color:chocolate;/*удалить потом*/
+    border-radius: 5px;
 }
 
 .a {
@@ -44,6 +45,7 @@ ul {
     overflow: hidden;
 }
 
+/*text*/
 /*header*/
 .logo {
     width: 154px;
@@ -152,10 +154,6 @@ ul {
     line-height: 45px;
 }
 
-.pagination-list{
-    text-align: right;
-}
-
 .pagination-list li{
     font-size: 16px;
     line-height: 18px;
@@ -185,21 +183,11 @@ ul {
 /*footer*/
 
 /*hidden windows*/
-.personal-account {
-    background-color:floralwhite;
-    background-image: url(/img/mailing-background.png);
-}
-
 .personal-account a{
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
     color: #323232;
-}
-
-.basket {
-    background-color:darksalmon;
-    background-image: url(/img/mailing-background.png);
 }
 
 .basket-list {
@@ -220,8 +208,204 @@ ul {
     color:#323232;
 }
 
-.search {
-    background-color:darksalmon;
-    background-image: url(/img/mailing-background.png);
+.feedback-text {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #323232;
 }
 /*hidden windows*/
+/*text*/
+
+/*flex*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    max-width: 1150px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*header*/
+.header-navigation-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container-logo{
+    margin-right: 24px;
+}
+
+.nav-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.main-navigation-list{
+    display: flex;
+    width: 348px;
+    justify-content: space-between;
+}
+
+.user-navigation-list{
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+}
+/*header*/
+
+/*main*/
+.wrapper-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sorting-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.assortiment-list{
+    display: flex;
+    height: 1450px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pagination-list{
+    text-align: right;
+}
+/*main*/
+
+/*footer*/
+.wrapper-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.social-network-list{
+    display: flex;
+    width: 185px;
+    justify-content: space-between;
+}
+
+.about-us-list{
+    display: flex;
+    width: 330px;
+    flex-wrap: wrap;
+}
+
+.about-us-list-column1{
+    padding-right: 30px;
+}
+
+.copyright{
+    margin-top: 0px;
+}
+/*footer*/
+
+/*hidden windows*/
+.wrapper-personal-account{
+    background-color: #f8f7f4;
+    background-image: url(/img/mailing-background.png);
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: 215px;
+    border-radius: 10px;
+    padding: 20px 17px 22px 19px;
+}
+
+.wrapper-personal-account-column{
+    display: flex;
+}
+
+.button-personal-account{
+    height: 45px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.personal-link-row{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+.wrapper-basket{
+    background-color:#f8f7f4;
+    background-image: url(/img/mailing-background.png);
+    width: 540px;
+    height: 240px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction:column;
+}
+
+.basket-column:last-child{
+    text-align: right;
+}
+
+.basket-list{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.basket-item{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.button-basket{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+}
+
+.basket-item-row{
+    padding-bottom: 40px;
+}
+
+.basket-column{
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.wrapper-search{
+    background-color: #f8f7f4;
+    background-image: url(/img/mailing-background.png);
+    width: 340px;
+    height: 85px;
+    display: flex;
+    border-radius: 5px;
+    padding: 15px 20px;
+}
+
+.catalog-navigation-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 145px;
+    height: 170px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+}
+/*hidden windows*/
+/*flex*/

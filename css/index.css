@@ -350,6 +350,7 @@ ul {
     margin-left: auto;
 }
 
+/*header*/
 .header-navigation-wrapper{
     display: flex;
     flex-direction: column;
@@ -383,8 +384,9 @@ ul {
     width: 185px;
     justify-content: space-between;
 }
+/*header*/
 
-
+/*main*/
 .wrapper-advertising{
     display: flex;
     width: 100%;
@@ -525,7 +527,9 @@ ul {
     padding-bottom: 30px;
     padding-right: 25px;
 }
+/*main*/
 
+/*footer*/
 .wrapper-footer{
     display: flex;
     width: 100%;
@@ -551,7 +555,9 @@ ul {
 .copyright{
     margin-top: 0px;
 }
+/*footer*/
 
+/*hidden windows*/
 .wrapper-personal-account{
     background-color: #f8f7f4;
     background-image: url(/img/mailing-background.png);
@@ -677,4 +683,5 @@ ul {
     padding: 15px;
     position: absolute;
 }
+/*hidden windows*/
 /*flex*/
