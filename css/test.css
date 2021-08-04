@@ -30,3 +30,13 @@
 .row5{
     background-color:darkgreen;
 }
+
+.list{
+    background-color: blueviolet;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+}

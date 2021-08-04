@@ -13,20 +13,20 @@
         <div class = "content">
             <header class = "main-header">
                 <div class = "header-navigation-wrapper">
-                    <div class = "header-navigation-column1">
+                    <div class = "header-navigation-column-nav">
                         <div class = "nav-container">
                             <div class = "container-logo">
-                                <a href = "#">
-                                    <img src = "img/logo.svg" width = "154" height = "64" alt = "Логотип GLLACY">
+                                <a href = "index.html">
+                                    <img src = "img/logo.svg" width = "180" height = "75" alt = "Логотип GLLACY">
                                 </a>
                             </div>
                             <div class = "nav-wrapper">
-                                <div class = "nav-wrapper-row1">
+                                <div class = "nav-wrapper-row-main">
                                     <nav class = "main-navigation">
                                         <ul class = "main-navigation-list">
                                             <li class = "main-navigation-item">
                                                 <a href = "#">Каталог</a>
-                                                <ul class = "catalog-navigation-list">
+                                                <ul class = "catalog-navigation-list visually-hidden">
                                                     <li class = "catalog-navigation-new"><a href = "#">Новинки</a></li>
                                                     <li class = "catalog-navigation-item"><a href = "catalog.html">Сливочное</a></li>
                                                     <li class = "catalog-navigation-item"><a href = "#">Щербеты</a></li>
@@ -39,17 +39,19 @@
                                         </ul>
                                     </nav>
                                 </div>
-                                <div class = "nav-wrapper-row2">
+                                <div class = "nav-wrapper-row-user">
                                     <ul class = "user-navigation-list">
-                                        <li class = "user-navigation-item"><button class = "button" type = "button">Поиск</button></li>
-                                        <li class = "user-navigation-item"><button class = "button" type = "button">Вход</button></li>
-                                        <li class = "user-navigation-item"><button class = "button" type = "button">Корзина</button></li>
+                                        <li class = "user-navigation-item"><button class = "user-navigation-button-search user-navigation-button button" type = "button"></button></li>
+                                        <li class = "user-navigation-item"><button class = "user-navigation-button-join user-navigation-button button" type = "button">Вход</button></li>
+                                        <li class = "user-navigation-item"><button class = "user-navigation-button-basket user-navigation-button button" type = "button">
+                                            <div class = "user-navigation-void-div"></div>
+                                            <span class = "text-void-basket">Пусто</span><span class = "text-full-basket">2 товара</span></button></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class = "header-navigation-column2">
+                    <div class = "header-navigation-column-about">
                         <div class = "header-work-time">С 10 до 20, ежедневно</div>
                         <div class = "header-phone-number">8 812 450-25-25</div>
                     </div>
@@ -65,11 +67,9 @@
                         </div>
                         <div class = "column-advertising">
                             <div class = "advertising-container">
-                                <div class= "row-advertising fon-slider">
-                                    <button class = "button" type = "button">Первый слайд</button>
-                                    <button class = "button" type = "button">Второй слайд</button>
-                                    <button class = "button" type = "button">Третий слайд</button>
-                                </div>
+                                <button class = "button-slider button-slider1 button" type = "button"></button>
+                                <button class = "button-slider button-slider2 button" type = "button"></button>
+                                <button class = "button-slider button-slider3 button" type = "button"></button>
                                 <div class = "row-advertising button-advertising-container">
                                     <button class = "button advertising-button" type = "button">Давайте оба!</button>
                                 </div>
