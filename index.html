@@ -39,11 +39,90 @@
                                 </div>
                                 <div class = "nav-wrapper-row-user">
                                     <ul class = "user-navigation-list">
-                                        <li class = "user-navigation-item"><button class = "user-navigation-button-search user-navigation-button button" type = "button"></button></li>
-                                        <li class = "user-navigation-item"><button class = "user-navigation-button-join user-navigation-button button" type = "button">Вход</button></li>
-                                        <li class = "user-navigation-item"><button class = "user-navigation-button-basket user-navigation-button button" type = "button">
+                                        <li class = "user-navigation-item user-navigation-button-search">
+                                            <div class = "wrapper-search">
+                                                <h2 class = "visually-hidden">Поиск</h2>
+                                                <p class = "search-p">
+                                                    <label class = "visually-hidden" for = "search">Поиск</label>
+                                                    <input class = "input-search user-navigation-input" id = "search" name = "search" placeholder = "Крем-брюле" type = "search">
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class = "user-navigation-item user-navigation-button-join">
+                                            Вход
+                                            <div class = "wrapper-personal-account">
+                                                <h2 class = "visually-hidden">Вход в личный кабинет</h2>
+                                                <form method = "POST" action = "index.html">
+                                                    <p class = "personal-account-login">
+                                                        <label class = "visually-hidden" for = "user_login">Логин</label>
+                                                        <input class = "user-navigation-input" id = "user_login" type = "email" name = "login"
+                                                            placeholder = "mail@example.com">
+                                                    </p>
+                                                    <p class = "personal-account-password">
+                                                        <label class = "visually-hidden" for = "user_password">Пароль</label>
+                                                        <input class = "user-navigation-input" id = "user_password" type = "password" name = "password"
+                                                            placeholder = "********">
+                                                    </p>
+                                                <div class = "wrapper-personal-account-column">
+                                                    <button class = "button button-personal-account" type = "submit">Войти</button>
+                                                </form>
+                                                    <p class = "personal-link-row">
+                                                        <a href = "#">Забыли пароль?</a>
+                                                        <a href = "#">Новая регистрация</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        <li class = "user-navigation-item user-navigation-button-basket">
+                                            <div class = "wrapper-basket">
+                                                <h2 class = "visually-hidden">Корзина</h2>
+                                                <ul class = "basket-list">
+                                                    <li class = "basket-item">
+                                                        <button class = "button button-basket" type = "button">
+                                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                                                            <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                                                                5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                                                        </svg>
+                                                        </button>
+                                                        <div class = "basket-item-row basket-img1"></div>
+                                                        <div class = "basket-item-row basket-item-row-text">
+                                                            Пломбир с апельсиновым джемом
+                                                        </div>
+                                                        <div class = "basket-item-row basket-item-row-price">
+                                                            <p>1,5 кг x <span class = "basket-item-text"> 200 руб.</span></p>
+                                                        </div>
+                                                        <div class = "basket-item-row basket-item-row-sum">
+                                                            300 руб.
+                                                        </div>
+                                                    </li>
+                                                    <li class = "basket-item">
+                                                        <button class = "button button-basket" type = "button">
+                                                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                    width="11px" height="11px" viewBox="0 0 11 11" enable-background="new 0 0 11 11" xml:space="preserve">
+                                                                <polygon fill="#231F20" points="10.979,0.728 10.271,0.021 5.5,4.792 0.729,0.021 0.021,0.728 4.793,5.5 0.021,10.271 0.728,10.979 
+                                                                    5.5,6.207 10.271,10.979 10.979,10.271 6.207,5.5 "/>
+                                                            </svg>
+                                                        </button>
+                                                        <div class = "basket-item-row basket-img2"></div>
+                                                        <div class = "basket-item-row basket-item-row-text">
+                                                            Клубничный пломбир с присыпкой<br> из белого шоколада
+                                                        </div>
+                                                        <div class = "basket-item-row basket-item-row-price">
+                                                            <p>1,5 кг x <span class = "basket-item-text">300 руб.</span></p>
+                                                        </div>
+                                                        <div class = "basket-item-row basket-item-row-sum">
+                                                            450 руб.
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class = "basket-column">
+                                                    <p class = "basket-sum">Итого: 750 руб.</p>
+                                                    <button class = "button button-basket-order" type = "button"><p class = "button-text-basket">Оформить заказ</p></button>
+                                                </div>
+                                            </div>
                                             <div class = "user-navigation-void-div"></div>
-                                            <span class = "text-void-basket">Пусто</span><span class = "text-full-basket">2 товара</span></button></li>
+                                            <span class = "text-void-basket">Пусто</span><span class = "text-full-basket">2 товара</span>
+                                            </li>
                                     </ul>
                                 </div>
                             </div>
@@ -242,74 +321,6 @@
             </footer>
         </div>
 
-        <section class = "personal-account">
-            <div class = "wrapper-personal-account">
-                <h2 class = "visually-hidden">Вход в личный кабинет</h2>
-                <form method = "POST" action = "index.html">
-                    <p class = "personal-account-login">
-                        <label class = "visually-hidden" for = "user_login">Логин</label>
-                        <input id = "user_login" type = "email" name = "login"
-                            placeholder = "mail@example.com">
-                    </p>
-                    <p class = "personal-account-password">
-                        <label class = "visually-hidden" for = "user_password">Пароль</label>
-                        <input id = "user_password" type = "password" name = "password"
-                            placeholder = "********">
-                    </p>
-                <div class = "wrapper-personal-account-column">
-                    <button class = "button button-personal-account" type = "submit">Войти</button>
-                </form>
-                    <p class = "personal-link-row">
-                        <a href = "#">Забыли пароль?</a>
-                        <a href = "#">Новая регистрация</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class = "basket">
-            <div class = "wrapper-basket">
-                <h2 class = "visually-hidden">Корзина</h2>
-                <ul class = "basket-list">
-                    <li class = "basket-item">
-                        <button class = "button button-basket" type = "button">x</button>
-                        <div class = "basket-item-row basket-img1"></div>
-                        <div class = "basket-item-row basket-item-row-text">
-                           Пломбир с апельсиновым джемом
-                        </div>
-                        <div class = "basket-item-row basket-item-row-price">
-                           <p>1,5 кг x <span class = "basket-item-text"> 200 руб.</span></p>
-                        </div>
-                        <div class = "basket-item-row basket-item-row-sum">
-                            300 руб.
-                        </div>
-                    </li>
-                    <li class = "basket-item">
-                        <button class = "button button-basket" type = "button">x</button>
-                        <div class = "basket-item-row basket-img2"></div>
-                        <div class = "basket-item-row basket-item-row-text">
-                           Клубничный пломбир с присыпкой<br> из белого шоколада
-                        </div>
-                        <div class = "basket-item-row basket-item-row-price">
-                           <p>1,5 кг x <span class = "basket-item-text">300 руб.</span></p>
-                        </div>
-                        <div class = "basket-item-row basket-item-row-sum">
-                            450 руб.
-                        </div>
-                    </li>
-                </ul>
-                <div class = "basket-column">
-                    <p class = "basket-sum">Итого: 750 руб.</p>
-                    <button class = "button" type = "button">Оформить заказ</button>
-                </div>
-            </div>
-        </section>
-        <section class = "search">
-            <div class = "wrapper-search">
-                <h2 class = "visually-hidden">Поиск</h2>
-                <label class = "visually-hidden" for = "search">Поиск</label>
-                <input id = "search" name = "search" placeholder = "Крем-брюле" type = "search">
-            </div>
-        </section>
         <section class = "feedback">
             <div class = "wrapper-feedback">
                 <h2 class = "feedback-text">Мы обязательно вам ответим!</h2>
