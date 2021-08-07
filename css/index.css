@@ -515,7 +515,8 @@ a{
     position: absolute;
     right: 0;
     top: 40px;
-    transition-delay: 1s;
+    transition-delay: 0.2s;
+    box-shadow: 0px 20px 20px 0 #0006
 }
 
 .user-navigation-button-basket:hover .wrapper-basket{
@@ -788,7 +789,7 @@ a{
 }
 
 .gifts-row{
-    width: 48.9%;
+    width: 48.8%;
     margin-right: 2.2%;
 }
 
@@ -797,23 +798,46 @@ a{
 }
 
 .gifts-title{
+    font-size: 35px;
+    line-height: 41px;
     margin-top: 0px;
-    margin-bottom: 20px;
-    padding-top: 15px;
-    padding-left: 20px;
+    margin-bottom: 14px;
+    padding-top: 16px;
+    padding-left: 19px;
 }
 
 .gifts-text{
     margin-top: 0;
     padding-left: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 28px;
     padding-right: 20px;
 }
 
 .gifts-link{
     text-align: right;
-    padding-right: 20px;
-    margin-bottom: 20px;
+    padding-right: 24px;
+    margin-bottom: 24px;
+}
+
+.button-gifts{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    display: inline-flex;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 2px 0 #ac1000a3;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button-gifts:hover{
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button-gifts:active{
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
 }
 
 .raspberry{
@@ -852,7 +876,6 @@ a{
     color: #ffffff;
     font-size: 18px;
     line-height: 24px;
-    text-align: center;
     text-decoration: none;
 }
 
@@ -866,18 +889,72 @@ a{
     line-height: 22px;
 }
 
-.wrapper-assortiment{
+.wrapper-assortment{
     width: 100%;
     min-height: 322px;
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
+    padding: 0;
+}
+
+.assortment-item:hover{
+    box-shadow: 0px 20px 20px 0 #0006;
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 5px;
+}
+
+.assortment-item:hover img{
+    width: 95%;
+    padding: 5px 0;
+}
+
+.wrapper-assortment figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.assortment-item-unit figcaption{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -9%;
+    margin-right: 10px;
+}
+
+.assortment-item-unit a:hover{
+    color: #ffbc9e;
+}
+
+.assortment-item{
+    position: relative;
+    width: 23.35%;
+    text-align: center;
+    margin-right: 2.2%;
+}
+
+.assortment-item::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 61px;
+    height: 61px;
+    background-image: url(/img/hit.svg);
+}
+
+.assortment-item-last{
+    margin-right: 0;
 }
 
 .assortment-item a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
-    text-align: center;
     line-height: 22px;
     font-weight: 500;
     color: #ffffff;
@@ -891,6 +968,45 @@ a{
 .assortment-item-kilograms{
     font-size: 30px;
     line-height: 45px;
+}
+
+.assortment-item-view-button{
+    text-align: center;
+    color: #fefefe;
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.assortment-item-view-button:hover{
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.assortment-item-view-button:active{
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.assortment-item:hover .assortment-item-view-button{
+    display:flex;
+}
+
+.assortment-item:hover .assortment-item-weight{
+    margin-left: -40%;
+}
+
+.assortment-item-weight{
+    position: flex;
+    margin-top: -22%;
+    margin-left: -45%;
 }
 
 .advantages{
