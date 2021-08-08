@@ -226,27 +226,41 @@
                 </section>
                 <section class = "advantages">
                     <div class = "wrapper-advantages">
-                        <h2 class = "advantages-title">Магазин Глэйси - это онлайн и офлайн магазин по продаже мороженого собственного<br>
+                        <h2 class = "advantages-title">Магазин Глэйси — это онлайн- и офлайн - магазин по продаже мороженого собственного<br>
                         производства на развес</h2>
                         <ul class = "advantages-list">
-                            <li class = "advantages-item1">Все наше мороженое изготавливается на собственном<br>
-                                производстве, с использованием современного оборудования<br>
-                                и проверенных временем технологий.
+                            <li class = "advantages-item advantages-item-ice">
+                                <img src = "/img/ice.svg" width = "49px" height = "49px" alt = "иконка мороженого">
+                               <p>
+                                    Все наше мороженое изготавливается на собственном
+                                    производстве, с использованием современного оборудования
+                                    и проверенных временем технологий.
+                               </p>
                             </li>
-                            <li class = "advantages-item2">
-                                Закупка ингредиентов  производится только у проверенных<br>
-                                фермерских хозяйств и компаний, с которыми нас связывает<br>
-                                долговременное сотрудничество.
+                            <li class = "advantages-item advantages-item-cow">
+                                <img src = "/img/cow.svg" width = "49px" height = "49px" alt = "иконка коровы">
+                               <p>
+                                    Закупка ингредиентов  производится только у проверенных
+                                    фермерских хозяйств и компаний, с которыми нас связывает
+                                    долговременное сотрудничество.
+                               </p>
                             </li>
-                            <li class = "advantages-item3">Для приготовления мороженого используются настоящие<br>
-                                сливки и молоко высочайшего качества. Все дополнительные<br>
-                                ингредиенты и добавки произведены из натурального,<br>
-                                экологически чистого сырья. 
+                            <li class = "advantages-item advantages-item-sheet">
+                                <img src = "/img/sheet.svg" width = "49px" height = "49px" alt = "иконка листа">
+                                <p>
+                                    Для приготовления мороженого используются настоящие
+                                    сливки и молоко высочайшего качества. Все дополнительные
+                                    ингредиенты и добавки произведены из натурального,
+                                    экологически чистого сырья.
+                                </p> 
                             </li>
-                            <li class = "advantages-item4">
-                                Доставка нашего мороженого до заказчиков осуществляется<br>
-                                в специальном термопаке, который не дает мороженому<br>
-                                растаять в пути и позволяет сохранить превосходный вкус.
+                            <li class = "advantages-item advantages-item-thermometer">
+                                <img src = "/img/thermometer.svg" width = "49px" height = "49px" alt = "иконка термометра">
+                                <p>
+                                    Доставка нашего мороженого до заказчиков осуществляется
+                                    в специальном термопаке, который не дает мороженому
+                                    растаять в пути и позволяет сохранить превосходный вкус.
+                                </p>
                             </li>
                         </ul>
                     </div>
@@ -254,22 +268,22 @@
                 <section class = "useful">
                     <div class = "wrapper-useful">
                         <h2 class = "visually-hidden">Это интересно и полезно</h2>
-                        <div class = "useful-row">
+                        <div class = "useful-row useful-news">
                             <article class = "blog-new">
                                 <h3 class = "blog-new-title">Новое в нашем блоге</h3>
                                 <p class = "blog-new-link"><a href = "#">10 способов сервировки<br>
                                     фруктовых щербетов к<br>столу</a></p>
                             </article>
                         </div>
-                        <div class = "useful-row">
+                        <div class = "useful-row useful-post">
                             <article class = "mailing">
                                 <h2 class = "visually-hidden">Подписка</h2>
-                                <p class = "mailing-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе<br>
-                                всего самого вкусного, что у нас происходит. Обещаем не<br>
+                                <p class = "mailing-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+                                всего самого вкусного, что у нас происходит. Обещаем не
                                 спамить и не слать всякой ненужной ерунды. Честно =)</p>
-                                <form  method = "GET" action = "index.html">
-                                    <p class = "form-mailing"><input id = "mailing-email" name = "email" type = "email" placeholder = "email@example.com">
-                                    <button class = "button" type = "submit">Отправить</button>
+                                <form  class = "useful-form" method = "GET" action = "index.html">
+                                    <p class = "form-mailing"><input class = "mailing-email-input" id = "useful-mailing-email" name = "mailing-email" type = "email" placeholder = "email@example.com">
+                                    <button class = "button useful-button-mailing" type = "submit">Отправить</button>
                                     </p>
                                 </form>
                             </article>
@@ -279,6 +293,7 @@
                 <section class = "address">
                     <h2 class = "visually-hidden">Карта</h2>
                     <div class = "wrapper-address">
+                        <img class = "map-ice" src = "/img/map-ice.png" width = "218px" height = "80px" alt = "адрес нашего магазина">
                         <img src = "img/map.png" class = "img-map" width = "100%" height = "430px" alt = "Местоположение магазина глэси">
                         <div class = "address-block">
                             <p class = "address-text">
@@ -292,7 +307,37 @@
                                 <span class = "address-phone-bold">8 812 450-25-25<br></span>
                                 (с 10 до 20 ежедневно)
                             </p>
-                            <button class = "button" type = "button">Форма обратной связи</button>
+                            <button class = "button address-button" type = "button">Форма обратной связи</button>
+                        </div>
+                        <div class = "wrapper-feedback">
+                            <h2 class = "feedback-text">Мы обязательно вам ответим!</h2>
+                            <form class = "feedback-form" method = "POST" action = "index.html">
+                                <p class = "feedback-user-name">
+                                    <label class = "visually-hidden" for = "user-name">Ваше имя и фамилия</label>
+                                    <input class = "user-name-feedback" id = "user-name" name = "user-name" type = "text"
+                                        placeholder = "Имя Фамилия">
+                                </p>
+                                <p class = "feedback-user-email">
+                                    <label class = "visually-hidden" for = "user-email">Ваш имейл адрес</label>
+                                    <input class = "user-email-feedback" id = "user-email" name = "email" type = "email"
+                                        placeholder = "email@example.com">
+                                </p>
+                                <p class = "feedback-about-user-p">
+                                    <label class = "visually-hidden" for = "about-user">Расскажите о себе</label>
+                                    <textarea class = "feedback-about-user" id = "about-user" name = "about-user" type = "text" rows = "6"
+                                        placeholder = "В свободной форме"></textarea>
+                                </p>
+                                <p class = "feedback-button">
+                                    <button class = "button button-feedback" type = "submit">Отправить</button>
+                                </p>
+                            </form>
+                            <button class = "button button-close" type = "button">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	                                width="18px" height="17px" viewBox="0 0 18 17" enable-background="new 0 0 18 17" xml:space="preserve">
+                                <polygon fill="#231F20" points="17.454,1.46 16.04,0.046 9,7.086 1.96,0.046 0.546,1.46 7.586,8.5 0.546,15.54 1.96,16.954 9,9.914 
+                                    16.04,16.954 17.454,15.54 10.414,8.5 "/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -340,33 +385,6 @@
                 </div>
             </footer>
         </div>
-
-        <section class = "feedback">
-            <div class = "wrapper-feedback">
-                <h2 class = "feedback-text">Мы обязательно вам ответим!</h2>
-                <form method = "POST" action = "index.html" class = "feedback-form">
-                    <p class = "feedback-user-name">
-                        <label class = "visually-hidden" for = "user-name">Ваше имя и фамилия</label>
-                        <input class = "user-name-feedback" id = "user-name" name = "user-name" type = "text"
-                            placeholder = "Имя Фамилия">
-                    </p>
-                    <p class = "feedback-user-email">
-                        <label class = "visually-hidden" for = "user-email">Ваш имейл адрес</label>
-                        <input class = "user-email-feedback" id = "user-email" name = "email" type = "email"
-                            placeholder = "email@example.com">
-                    </p>
-                    <p class = "feedback-about-user-p">
-                        <label class = "visually-hidden" for = "about-user">Расскажите о себе</label>
-                        <textarea class = "feedback-about-user" id = "about-user" name = "about-user" type = "text" rows = "6"
-                            placeholder = "В свободной форме"></textarea>
-                    </p>
-                    <p class = "feedback-button">
-                        <button class = "button button-feedback" type = "submit">Отправить</button>
-                    </p>
-                </form>
-            </div>
-            <button class = "button" type = "button">Закрыть</button>
-        </section>
         
         <script src = "js/script.js"></script>
     </body>

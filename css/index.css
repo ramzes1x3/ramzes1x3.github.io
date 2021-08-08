@@ -388,7 +388,7 @@ a{
     top: 40px;
     right: 0;
     box-shadow: 0px 20px 20px 0 #0006;
-    transition-delay: 1s;
+    transition-delay: 0.2s;
 }
 
 .user-navigation-button-join:hover .wrapper-personal-account{
@@ -1010,7 +1010,6 @@ a{
 }
 
 .advantages{
-    background-color: burlywood;
     background-image: url(/img/waffle-background.webp);
     background-repeat: no-repeat;
     background-size:cover;
@@ -1019,17 +1018,19 @@ a{
 
 .wrapper-advantages{
     width: 100%;
-    min-height: 305px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    min-height: 304px;
     margin-bottom: 40px;
+    padding-left: 1.7%;
+    padding-right: 1.7%;
+    font-family: "Roboto", Arial, sans-serif;
+    padding-bottom: 0;
 }
 
 .advantages-list{
     display: flex;
     flex-flow: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0 0 0 0;
 }
 
 .advantages-title{
@@ -1037,15 +1038,39 @@ a{
     line-height: 30px;
     font-weight: 500;
     color: #323232;
-    padding-left: 21px;
+    margin: 0;
+    padding-top: 22px;
+    margin-bottom: 10px;
 }
 
 .advantages-list li{
-    font-size: 14px;
+    position: relative;
+    font-size: 16px;
     line-height: 22px;
     font-weight: 400;
     color: #323232;
-    padding-bottom: 20px;
+}
+
+.advantages-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 49%;
+    min-height: 88px;
+}
+
+.advantages-item p{
+    align-self: center;
+    padding-bottom: 1%;
+}
+
+.advantages-item img{
+    margin-right: 1.3%;
+    align-self: flex-start;
+}
+
+.advantages-item-sheet, .advantages-item-thermometer{
+    padding-bottom: 0;
 }
 
 .wrapper-useful{
@@ -1058,16 +1083,20 @@ a{
 }
 
 .useful-row{
-    width: 560px;
-    min-height: 220px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
 }
 
 .blog-new {
+    width: 560px;
+    min-height: 220px;
     background-color: cornsilk;
     background-image: url(/img/strawberry-background.webp);
     background-repeat: no-repeat;
     background-size:cover;
     border-radius: 15px;
+    padding-left: 19px;
 }
 
 .blog-new-title {
@@ -1075,6 +1104,8 @@ a{
     line-height: 22px;
     color: #323232;
     font-weight: 500;
+    padding-top: 25px;
+    margin: 0;
 }
 
 .blog-new a{
@@ -1083,22 +1114,26 @@ a{
     color: #323232;
 }
 
-.mailing-text, .blog-new-title{
-    padding-left: 20px;
-    padding-top: 30px;
-}
-
 .blog-new-link{
-    padding-left: 20px;
+    margin: 0;
     padding-bottom: 85px;
 }
 
+.blog-new-link a:hover{
+    color:#e84d37;
+}
+
 .mailing {
+    width: 560px;
+    min-height: 220px;
     background-color: cornsilk;
-    background-image: url(/img/mailing-background.png);
+    background-image: url(/img/mailing-background.png), url(/img/post.png);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: 98%, cover;
+    background-position: 5px 5px, 0 0;
     border-radius: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
 }
 
 .mailing-text {
@@ -1106,26 +1141,162 @@ a{
     line-height: 22px;
     font-weight: 400;
     color: #5a5a5a;
+    padding-top: 36px;
 }
 
 .mailing-text{
-    padding-bottom: 40px;
+    margin: 0;
+    padding-bottom: 8px;
 }
 
-.form-mailing{
-    padding-left: 20px;
-    padding-bottom: 67px;
+.useful-form{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input[name = "mailing-email"] {
+    width: 368px;
+    height: 44px;
+    border-radius: 5px;
+    border: solid 1px #b2b2b285;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px;
+}
+
+.mailing-email-input:hover{
+    outline: none;
+    border: solid 2px #2e88e485;
+}
+
+.mailing-email-input:focus{
+    outline: none;
+    border: solid 2px #2e88e485;
+}
+
+.mailing-email-input::-webkit-input-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.mailing-email-input::-ms-input-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.mailing-email-input::-moz-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.mailing-email-input::-webkit-input-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.mailing-email-input:focus::-webkit-input-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent;
+}
+
+.mailing-email-input:focus::-moz-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent
+}
+  
+.mailing-email-input:focus:-ms-input-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent
+}
+
+.useful-button-mailing{
+    text-align: center;
+    color: #fefefe;
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+    padding: 10px 17px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 20px;
+}
+
+.useful-button-mailing:hover{
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.useful-button-mailing:active{
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.useful-button-mailing{
+    display: inline-flex;
+}
+
+.address{
+    position: relative;
+    width: 100%;
 }
 
 .wrapper-address{
-    width: 100%;
+    width: 104.6%;
     position: relative;
     display: flex;
     margin-bottom: 20px;
+    margin-left: -2.3%;
+}
+
+.map-ice{
+    position: absolute;
+    left: 23%;
+    top: 31%;
 }
 
 .address-block{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    right: 3%;
+    top: 10%;
+}
+
+.address-block p{
+    margin-top: 0;
+}
+
+.address-button{
+    text-align: center;
+    color: #fefefe;
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+    padding: 9px 30px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.address-button:hover{
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.address-button:active{
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
 }
 
 .address-text {
@@ -1214,12 +1385,16 @@ a{
 .wrapper-feedback{
     background-color: #f8f7f4;
     background-image: url(/img/mailing-background.png);
-    display: flex;
+    position: absolute;
+    display: none;
     flex-direction: column;
     width: 480px;
-    height: 440px;
+    min-height: 440px;
     border-radius: 5px;
-    padding: 25px;
+    padding: 25px 25px 15px 25px;
+    right: 35%;
+    top: 10%;
+    transition-delay: 0.5s;
 }
 
 .user-name-feedback, .user-email-feedback{
@@ -1227,10 +1402,11 @@ a{
     height: 45px;
     border: solid 1px #d3d3d2;
     border-radius: 5px;
-    font-family: "Roboto", Arial, sans-serif;;
+    font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
-    color: #999999;
+    color: #323232;
+    font-weight: 700;
     padding: 15px;
 }
 
@@ -1251,5 +1427,84 @@ a{
     line-height: 28px;
     font-weight: 500;
     color: #323232;
+    margin: 0;
+}
+
+.button-close{
+    background-color: #f8f7f4;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 90%;
+}
+
+.button-close:hover polygon{
+    fill: #ac1000
+}
+
+.button-feedback{
+    text-align: center;
+    color: #fefefe;
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+    padding: 9px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.button-feedback:hover{
+    box-shadow: 0px 1px 2px 0 #ac1000;
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.button-feedback:active{
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.feedback-form input:hover, .feedback-form textarea:hover{
+    outline: none;
+    border: solid 2px #2e88e485;
+}
+
+.feedback-form input:focus, .feedback-form textarea:focus{
+    outline: none;
+    border: solid 2px #2e88e485;
+}
+
+.feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.feedback-form input::-ms-input-placeholder, .feedback-form textarea::-ms-input-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder{
+    color: #999999;
+    font-weight: 400;
+}
+
+.feedback-form input:focus::-webkit-input-placeholder, .feedback-form textarea:focus::-webkit-input-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent;
+}
+
+.feedback-form input:focus:-ms-input-placeholder, .feedback-form textarea:focus::-ms-input-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent;
+}
+
+.feedback-form input:focus::-moz-placeholder, .feedback-form textarea:focus::-moz-placeholder{
+    transition: all 0.6s linear 0s;
+    font-weight: 400;
+    color: transparent
 }
 /*hidden windows*/
