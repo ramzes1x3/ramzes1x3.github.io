@@ -7,12 +7,10 @@
 body{
     margin: 0;
     padding: 0;
-
     font-family: "Roboto", Arial, sans-serif;
     line-height: 18px;
     font-weight: 700;
     color: #ffffff;
-
     background-color: #849d8f;
     background-image: url(/img/general-background-1.png);
     background-position: top center;
@@ -396,18 +394,10 @@ a{
     transition-delay: 0s;
 }
 
-.wrapper-personal-account-column{
-    display: flex;
-}
-
-.button-personal-account{
-    height: 45px;
-    width: 100px;
-    margin-right: 20px;
-}
-
 .personal-link-row{
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     margin-top: 0px;
 }
@@ -423,10 +413,18 @@ a{
     color: #e84d37;
 }
 
+.personal-account-column{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .button-personal-account{
+    display: inline-flex;
     box-shadow: 0px 1px 2px 0 #ac1000;
     background-image: linear-gradient(to top, #e74a35, #f26843);
-    border-radius: 30px;
+    border-radius: 60px / 80px;
     color: #fefefe;
     font-size: 18px;
     line-height: 24px;
@@ -516,7 +514,7 @@ a{
     right: 0;
     top: 40px;
     transition-delay: 0.2s;
-    box-shadow: 0px 20px 20px 0 #0006
+    box-shadow: 0px 20px 20px 0 #0006;
 }
 
 .user-navigation-button-basket:hover .wrapper-basket{
@@ -610,6 +608,7 @@ a{
     height: 40%;
     padding-right: 15px;
     margin-top: 15px;
+    padding-bottom: 20px;
 }
 
 .basket-sum{
@@ -625,20 +624,13 @@ a{
 }
 
 .button-basket-order{
-    width: 170px;
-    height: 40px;
     box-shadow: 0px 1px 2px 0 #ac1000;
     background-image: linear-gradient(to top, #e74a35, #f26843);
-    border-radius: 20px;
-}
-
-.button-basket-order .button-text-basket{
-    margin: 0px;
-    text-align: center;
+    border-radius: 70px / 80px;
+    padding: 10px 20px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
-    padding: 0;
 }
 
 .button-basket-order:hover{
@@ -755,14 +747,12 @@ a{
 }
 
 .advertising-button{
-    width: 280px;
-    height: 64px;
     border-radius: 30px;
     text-align: center;
     font-size: 32px;
     line-height: 44px;
     font-weight: 700;
-    padding-left: 2px;
+    padding: 10px 40px;
     text-shadow: 0px 2px 5px #a0200bc2;
     color: #ffffff;
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -896,6 +886,13 @@ a{
     display: flex;
     margin-bottom: 40px;
     padding: 0;
+}
+
+.assortment-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .assortment-item:hover{
@@ -1253,7 +1250,7 @@ input[name = "mailing-email"] {
     width: 104.6%;
     position: relative;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-left: -2.3%;
 }
 
@@ -1341,33 +1338,80 @@ input[name = "mailing-email"] {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 65px;
+    align-items: center;
 }
 
 .social-network-list{
     display: flex;
-    width: 185px;
+    min-width: 185px;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
-.about-us-list{
+.social-network-item{
+    background-image: url(/img/circle.svg);
+    width: 38px;
+    height: 38px;
+}
+
+.social-network-list a{
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+.social-network-list a:hover{
+    opacity: 1;
+}
+
+.social-network-list a:active path{
+    opacity: 0.8;
+    fill: #e9e9e9;
+}
+
+.footer-about-us-wrapper-list{
     display: flex;
-    width: 330px;
+}
+
+.footer-about-us-wrapper-list :first-child{
+    margin-right: 10px;
+}
+
+.about-us-list, .footer-document-list{
+    display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
 }
 
-.about-us-list-column1{
-    padding-right: 30px;
-}
-
-.about-us-list a{
+.about-us-list a, .footer-document-list a{
+    display: inline-flex;
+    position: relative;
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
     color: #ffffff;
 }
 
-.about-us-list:first-child a{
+.footer-document-list :first-child a{
     font-weight: 700;
+}
+
+.footer-document-list :first-child a::before{
+    content: "";
+    background-image: url(/img/heart.svg);
+    width: 15px;
+    height: 13px;
+    position: absolute;
+    left: -20px;
+    top: 3px;
 }
 
 .copyright{
@@ -1377,6 +1421,10 @@ input[name = "mailing-email"] {
     color: #fefefe;
     font-weight: 400;
     margin-top: 0px;
+}
+
+.footer a:hover{
+    color: #ffbc9e;
 }
 /*footer*/
 
