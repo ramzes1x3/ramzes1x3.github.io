@@ -1433,15 +1433,17 @@ input[name = "mailing-email"] {
 .wrapper-feedback{
     background-color: #f8f7f4;
     background-image: url(/img/mailing-background.png);
-    position: absolute;
+    position: fixed;
     display: none;
     flex-direction: column;
     width: 480px;
     min-height: 440px;
+    margin-top: -220px;
+    margin-left: -240px;
     border-radius: 5px;
     padding: 25px 25px 15px 25px;
-    right: 35%;
-    top: 10%;
+    top: 57%;
+    left: 50%;
     transition-delay: 0.5s;
 }
 
