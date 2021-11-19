@@ -1434,7 +1434,7 @@ input[name = "mailing-email"] {
     background-color: #f8f7f4;
     background-image: url(/img/mailing-background.png);
     position: fixed;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 480px;
     min-height: 440px;
@@ -1442,7 +1442,7 @@ input[name = "mailing-email"] {
     margin-left: -240px;
     border-radius: 5px;
     padding: 25px 25px 15px 25px;
-    top: 57%;
+    top: 50%;
     left: 50%;
     transition-delay: 0.5s;
 }
@@ -1452,7 +1452,7 @@ input[name = "mailing-email"] {
     height: 45px;
     border: solid 1px #d3d3d2;
     border-radius: 5px;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: inherit;
     font-size: 16px;
     line-height: 18px;
     color: #323232;
@@ -1480,7 +1480,7 @@ input[name = "mailing-email"] {
     margin: 0;
 }
 
-.button-close{
+.button-close-feedback{
     background-color: #f8f7f4;
     position: absolute;
     width: 17px;
@@ -1488,7 +1488,7 @@ input[name = "mailing-email"] {
     left: 90%;
 }
 
-.button-close:hover polygon{
+.button-close-feedback:hover polygon{
     fill: #ac1000
 }
 

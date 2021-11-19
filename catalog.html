@@ -7,7 +7,7 @@
         <link rel = "icon" href = "img/favicon.ico" type = "image/x-icon">
         <link rel = "stylesheet" href = "css/normalize.css">
         <link rel = "stylesheet" href = "/css/catalog.css">
-        <title>GLLACY_catalog</title>
+        <title>GLLACY</title>
     </head>
     <body>
         <div class = "content">
@@ -16,7 +16,9 @@
                     <div class = "header-navigation-column-nav">
                         <div class = "nav-container">
                             <div class = "container-logo">
-                                <img src = "img/logo.svg" width = "180" height = "75" alt = "Логотип GLLACY">
+                               <a href = "index.html" target = "_blank">
+                                    <img src = "img/logo.svg" width = "180" height = "75" alt = "Логотип GLLACY">
+                               </a>
                             </div>
                             <div class = "nav-wrapper">
                                 <div class = "nav-wrapper-row-main">
@@ -136,111 +138,123 @@
             </header>
             <main class = "main">
                 <div class = "wrapper-breads">
-                    <p class = "path-index"><a href = "index.html">Главная  >>  </a>
-                    <a href = "catalog.html">Каталог  >>  </a>
-                    Сливочное</p>
+                    <ul class = "breads breads_list_catalog">
+                        <li class = "breads_item index-page">
+                            <a href = "index.html">Главная</a> 
+                        </li>
+                        <li class = "breads_item catalog_page">
+                            <a href = "#">Каталог</a>
+                        </li>
+                        <li class = "breads_item creamy_page">
+                            Сливочное
+                        </li>
+                    </ul>
                 </div>
                 <h1 class = "main-title">Сливочное мороженое</h1>
                 <div class = "wrapper-sort">
                     <form method = "GET" action = "index.html" class = "sorting-form">
-                        <fieldset class = "sorting">
-                            <legend class = "sorting-title">Сортировка:</legend>
-                            <ul class = "sorting-list">
-                                <li class = "sorting-item">
-                                    <label>
-                                        <input id = "priority1" type = "radio" name = "priority"  value = "top" checked>
-                                        по популярности
-                                    </label>
-                                </li>
-                                <li class = "sorting-item">
-                                    <label>
-                                        <input id = "priority2" type = "radio" name = "priority"  value = "poor">
-                                        сначала недорогие
-                                    </label>
-                                </li>
-                                <li class = "sorting-item">
-                                    <label>
-                                        <input id = "priority3" type = "radio" name = "priority" value = "cheap">
-                                        сначала дорогие
-                                    </label>
-                                </li>
-                                <li class = "sorting-item">
-                                    <label>
-                                        <input id = "priority4" type = "radio" name = "priority" value = "fat_content">
-                                        по жирности
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class = "price-sorting">
-                            <legend>Цена: 100 руб. - 500 руб.</legend>
-                            <input id = "price" type = "range" name = "price">
-                        </fieldset>
-                        <fieldset class = "fat-content-sorting">
-                            <legend>Жирность:</legend>
-                            <ul class = "fat-content-sorting-list">
-                                <li class = "fat-content-sorting-item">
-                                    <label>
-                                        <input id = "0" name = "fat" type = "radio" value = "0">
-                                        0%
-                                    </label>
-                                </li>
-                                <li class = "fat-content-sorting-item">
-                                    <label>
-                                        <input id = "10" name = "fat" type = "radio" value = "10" checked>
-                                        до 10%
-                                    </label>
-                                </li>
-                                <li class = "fat-content-sorting-item">
-                                    <label>
-                                        <input id = "30" name = "fat" type = "radio" value = "30">
-                                        до 30%
-                                    </label>
-                                </li>
-                                <li class = "fat-content-sorting-item">
-                                    <label>
-                                        <input id = "30+" name = "fat" type = "radio" value = "30+">
-                                        выше 30%
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <fieldset class = "fillers-sorting">
-                            <legend>Наполнители:</legend>
-                            <ul class = "fillers-sorting-list">
-                                <li class = "fillers-sorting-item">
-                                    <label>
-                                        <input id = "chocolate" type = "checkbox" name = "chocolate" checked>
-                                        шоколадные
-                                    </label>
-                                </li>
-                                <li class = "fillers-sorting-item">
-                                    <label>
-                                        <input id = "sugar" type = "checkbox" name = "sugar" checked>
-                                        сахарные присыпки
-                                    </label>
-                                </li>
-                                <li class = "fillers-sorting-item">
-                                    <label>
-                                        <input id = "fruits" type = "checkbox" name = "fruits">
-                                        фрукты
-                                    </label>
-                                </li>
-                                <li class = "fillers-sorting-item">
-                                    <label>
-                                        <input id = "syrups" type = "checkbox" name = "syrups">
-                                        сиропы
-                                    </label>
-                                </li>
-                                <li class = "fillers-sorting-item">
-                                    <label>
-                                        <input id = "jams" type = "checkbox" name = "jams">
-                                        джемы
-                                    </label>
-                                </li>
-                            </ul>
-                        </fieldset>
-                        <button class = "submit-sorting" type = "submit">применить</button>
+                        <div class = "wrapper_sorting_form_row">
+                            <fieldset class = "sorting">
+                                <legend class = "sorting-title">Сортировка:</legend>
+                                <ul class = "sorting-list sorting_form_column">
+                                    <li class = "sorting-item">
+                                        <label>
+                                            <input id = "priority1" type = "radio" name = "priority"  value = "top" class = "visually-hidden" checked>
+                                            по популярности
+                                        </label>
+                                    </li>
+                                    <li class = "sorting-item">
+                                        <label>
+                                            <input id = "priority2" type = "radio" name = "priority"  value = "poor" class = "visually-hidden">
+                                            сначала недорогие
+                                        </label>
+                                    </li>
+                                    <li class = "sorting-item">
+                                        <label>
+                                            <input id = "priority3" type = "radio" name = "priority" value = "cheap" class = "visually-hidden">
+                                            сначала дорогие
+                                        </label>
+                                    </li>
+                                    <li class = "sorting-item">
+                                        <label>
+                                            <input id = "priority4" type = "radio" name = "priority" value = "fat_content" class = "visually-hidden">
+                                            по жирности
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <fieldset class = "price-sorting sorting_form_column">
+                                <legend>Цена: 100 руб. - 500 руб.</legend>
+                                <input id = "price" type = "range" name = "price">
+                            </fieldset>
+                            <fieldset class = "fat-content-sorting">
+                                <legend>Жирность:</legend>
+                                <ul class = "fat-content-sorting-list sorting_form_column">
+                                    <li class = "fat-content-sorting-item">
+                                        <label>
+                                            <input id = "0" name = "fat" type = "radio" value = "0">
+                                            0%
+                                        </label>
+                                    </li>
+                                    <li class = "fat-content-sorting-item">
+                                        <label>
+                                            <input id = "10" name = "fat" type = "radio" value = "10" checked>
+                                            до 10%
+                                        </label>
+                                    </li>
+                                    <li class = "fat-content-sorting-item">
+                                        <label>
+                                            <input id = "30" name = "fat" type = "radio" value = "30">
+                                            до 30%
+                                        </label>
+                                    </li>
+                                    <li class = "fat-content-sorting-item">
+                                        <label>
+                                            <input id = "30+" name = "fat" type = "radio" value = "30+">
+                                            выше 30%
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class = "wrapper_sorting_form_row">
+                            <fieldset class = "fillers-sorting">
+                                <legend>Наполнители:</legend>
+                                <ul class = "fillers-sorting-list sorting_form_column">
+                                    <li class = "fillers-sorting-item">
+                                        <label>
+                                            <input id = "chocolate" type = "checkbox" name = "chocolate" checked>
+                                            шоколадные
+                                        </label>
+                                    </li>
+                                    <li class = "fillers-sorting-item">
+                                        <label>
+                                            <input id = "sugar" type = "checkbox" name = "sugar" checked>
+                                            сахарные присыпки
+                                        </label>
+                                    </li>
+                                    <li class = "fillers-sorting-item">
+                                        <label>
+                                            <input id = "fruits" type = "checkbox" name = "fruits">
+                                            фрукты
+                                        </label>
+                                    </li>
+                                    <li class = "fillers-sorting-item">
+                                        <label>
+                                            <input id = "syrups" type = "checkbox" name = "syrups">
+                                            сиропы
+                                        </label>
+                                    </li>
+                                    <li class = "fillers-sorting-item">
+                                        <label>
+                                            <input id = "jams" type = "checkbox" name = "jams">
+                                            джемы
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            <button class = "submit-sorting sorting_form_column" type = "submit">Применить</button>
+                        </div>
                     </form>
                 </div>
                 <section class = "assortment">

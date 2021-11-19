@@ -9,11 +9,17 @@ body{
     padding: 0;
     font-family: "Roboto", Arial, sans-serif;
     line-height: 18px;
-    font-weight: 700;
+    font-weight: 400;
     color: #ffffff;
     background-color: #849d8f;
     background-position: top center;
     background-repeat: no-repeat;
+}
+
+fieldset{
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
 
 img{
@@ -63,7 +69,7 @@ a{
     flex-direction: column;
     margin: 0;
     padding: 0;
-    margin-bottom: 215px;
+    margin-bottom: 0;
     margin-top: 10px;
 }
 
@@ -97,6 +103,7 @@ a{
 .main-navigation-list{
     display: flex;
     flex-wrap: wrap;
+    font-weight: 700;
     min-width: 350px;
     max-width: 800px;
     margin: 0;
@@ -116,20 +123,20 @@ a{
 }
 
 .main-navigation-item > a:hover{
-    background-color: #f7f6f3;
+    background-color: #d07058;
     padding: 6px 15px;
     border-radius: 15px;
     text-decoration: none;
-    color: #323232;
+    color: #ffffff;
     transition: all 0.2s ease-out 0s;
 }
 
 .main-navigation-item > a:active{
-    background-color: #f7f6f3;
+    background-color: #d07058;
     padding: 6px 15px;
     border-radius: 15px;
     text-decoration: none;
-    color: #323232;
+    color: #ffffff;
     box-shadow: inset 0px 2px 1px 0px rgba(0, 0, 0, 0.6);
 }
 
@@ -465,20 +472,16 @@ a{
     height: 20px;
 }
 
-.user-navigation-button-basket .text-full-basket{
+.user-navigation-button-basket .text-void-basket{
     display: none;
 }
 
-.user-navigation-button-basket:hover{
+.user-navigation-button-basket{
     color: #323232;
     background-color: #f8f7f4;
 }
 
-.user-navigation-button-basket:hover .text-void-basket{
-    display: none;
-}
-
-.user-navigation-button-basket:hover .text-full-basket{
+.user-navigation-button-basket .text-full-basket{
     display: inline;
 }
 
@@ -488,14 +491,10 @@ a{
     overflow: hidden;
     width: 21px;
     height: 20px;
-    background-image: url(/img/basket.svg);
+    background-image: url(/img/basket-hover.svg);
     left: 15px;
     top: 7px;
-}
-
-.user-navigation-button-basket:hover::before{
-    background-image: url(/img/basket-hover.svg);
-}
+}  
 
 .wrapper-basket{
     background-color:#f8f7f4;
@@ -675,20 +674,112 @@ a{
     justify-content: flex-start;
 }
 
+.breads_list_catalog{
+    display:flex;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.breads_list_catalog li:not(:last-child)::after{
+    content:"»";
+    padding: 0 4px;
+}
+
+.breads_item a:hover{
+    color: #ffbc9e;
+}
+
 .wrapper-sort{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.path-index a{
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
+.wrapper_sorting_form_row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sorting-list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 194px;
+    height: 37px;
+    margin: 6px 0 0;
+    background-color: rgba(248, 247, 244, 0.2);
+    border-radius: 25px;
+}
+
+.sorting-list:hover {
+    overflow: initial;
+}
+
+.sorting-list .sorting-item:first-child{
+    margin-bottom: 25px;
+    padding: 10px 15px 10px 20px;
+}
+
+.sorting-list .sorting-item:not(:first-child){
+    position: relative;
+    margin-bottom: 5px;
+    font-family: inherit;
+    background-color: rgba(248, 247, 244, 0.2);
+}
+
+.sorting-item label{
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
     color: #ffffff;
 }
-.sorting-list{
-    display: flex;
+
+.sorting-list::after{
+    content:"";
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    top: 15px;
+    left: 170px;
+    background-image: url(/img/icon-down-dir.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.sorting-list:hover::after{
+    background-image: url(/img/icon-down-dir_black.svg);
+}
+
+.sorting-list:hover label{
+    color: #000000;
+    cursor: pointer;
+}
+
+.sorting-list:hover .sorting-item:not(:first-child){
+    width: 194px;
+    height: 37px;
+    padding: 10px 15px 10px 20px;
+    margin: 0;
+    border-radius: 25px;
+    background-color: lemonchiffon;
+}
+
+.sorting-list:hover li:first-child{
+    margin-bottom: 0;
+    background-color: lemonchiffon;
+    border-radius: 25px;
+}
+
+.sorting-item label:hover{
+    color: #5a5656;
 }
 
 .fat-content-sorting-list{
@@ -701,13 +792,6 @@ a{
 
 .submit-sorting{
     display: inline-flex;
-}
-
-.sorting-list li{
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 400;
-    color: #323232;
 }
 
 .sorting-form legend{
