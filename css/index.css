@@ -1254,6 +1254,13 @@ input[name = "mailing-email"] {
     margin-left: -2.3%;
 }
 
+.map_container{
+    display: block;
+    height: 430px;
+    width: 100%;
+    background-color: #000000;
+}
+
 .map-ice{
     position: absolute;
     left: 23%;
@@ -1429,8 +1436,31 @@ input[name = "mailing-email"] {
 /*footer*/
 
 /*hidden windows*/
+@keyframes bounce {
+    0%   { transform:translateY(-2000px);}
+    70%  { transform:translateY(0); }
+    90%  { transform:translateY(20px); }
+    100% { transform:translateY(0); }
+}
+
+.wrapper-feedback-show{
+    animation: bounce;
+    animation-duration: 0.6s;
+}
+
+@keyframes shake {
+    0%, 100%                 { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90%  { transform: translatex(-10px); }
+    20%, 40%, 60%, 80%       { transform: translateY(10px); }
+}
+
+.wrapper-feedback-error{
+    animation: shake;
+    animation-duration: 0.6s;
+}
 
 .wrapper-feedback{
+    z-index: 1;
     background-color: #f8f7f4;
     background-image: url(/img/mailing-background.png);
     position: fixed;
@@ -1444,7 +1474,6 @@ input[name = "mailing-email"] {
     padding: 25px 25px 15px 25px;
     top: 50%;
     left: 50%;
-    transition-delay: 0.5s;
 }
 
 .user-name-feedback, .user-email-feedback{
@@ -1523,6 +1552,11 @@ input[name = "mailing-email"] {
 .feedback-form input:focus, .feedback-form textarea:focus{
     outline: none;
     border: solid 2px #2e88e485;
+}
+
+.feedback-form .button-feedback:hover, .feedback-form .button-feedback:focus,
+.feedback-form .button-feedback:active {
+    border: 0;
 }
 
 .feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder{

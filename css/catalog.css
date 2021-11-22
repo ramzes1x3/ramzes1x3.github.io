@@ -769,12 +769,12 @@ a{
     padding: 10px 15px 10px 20px;
     margin: 0;
     border-radius: 25px;
-    background-color: lemonchiffon;
+    background-color:#ffffff;
 }
 
 .sorting-list:hover li:first-child{
     margin-bottom: 0;
-    background-color: lemonchiffon;
+    background-color:#ffffff;
     border-radius: 25px;
 }
 

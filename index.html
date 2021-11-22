@@ -56,12 +56,12 @@
                                                     <p class = "personal-account-login">
                                                         <label class = "visually-hidden" for = "user_login">Логин</label>
                                                         <input class = "user-navigation-input" id = "user_login" type = "email" name = "login"
-                                                            placeholder = "mail@example.com">
+                                                            placeholder = "mail@example.com" required>
                                                     </p>
                                                     <p class = "personal-account-password">
                                                         <label class = "visually-hidden" for = "user_password">Пароль</label>
                                                         <input class = "user-navigation-input" id = "user_password" type = "password" name = "password"
-                                                            placeholder = "********">
+                                                            placeholder = "********" required>
                                                     </p>
                                                     <div class = "personal-account-column">
                                                         <button class = "button button-personal-account" type = "submit">Войти</button>
@@ -282,7 +282,8 @@
                                 всего самого вкусного, что у нас происходит. Обещаем не
                                 спамить и не слать всякой ненужной ерунды. Честно =)</p>
                                 <form  class = "useful-form" method = "GET" action = "index.html">
-                                    <p class = "form-mailing"><input class = "mailing-email-input" id = "useful-mailing-email" name = "mailing-email" type = "email" placeholder = "email@example.com">
+                                    <p class = "form-mailing"><input class = "mailing-email-input" id = "useful-mailing-email" name = "mailing-email" 
+                                        type = "email" placeholder = "email@example.com" required>
                                     <button class = "button useful-button-mailing" type = "submit">Отправить</button>
                                     </p>
                                 </form>
@@ -293,8 +294,9 @@
                 <section class = "address">
                     <h2 class = "visually-hidden">Карта</h2>
                     <div class = "wrapper-address">
-                        <img class = "map-ice" src = "/img/map-ice.png" width = "218" height = "80" alt = "адрес нашего магазина">
-                        <img src = "img/map.png" class = "img-map" height = "430" alt = "Местоположение магазина глэси">
+                        <div id = "map" class = "map_container"></div>
+                        <!-- <img class = "map-ice" src = "/img/map-ice.png" width = "218" height = "80" alt = "ул. Большая Конюшенная 19/8, Санкт-Петербург">
+                        <img src = "img/map.png" class = "img-map" height = "430" alt = "ул. Большая Конюшенная 19/8, Санкт-Петербург"> -->
                         <div class = "address-block">
                             <p class = "address-text">
                                 Адрес главного офиса<br>
@@ -309,18 +311,18 @@
                             </p>
                             <button class = "button address-button" type = "button">Форма обратной связи</button>
                         </div>
-                        <div class = "wrapper-feedback">
+                        <div class = "wrapper-feedback visually-hidden">
                             <h2 class = "feedback-text">Мы обязательно вам ответим!</h2>
-                            <form class = "feedback-form" method = "POST" action = "index.html">
-                                <p class = "feedback-user-name">
-                                    <label class = "visually-hidden" for = "user-name">Ваше имя и фамилия</label>
-                                    <input class = "user-name-feedback" id = "user-name" name = "user-name" type = "text"
-                                        placeholder = "Имя Фамилия">
+                            <form id = "feedbackForm" class = "feedback-form" method = "POST" action = "index.html">
+                                <p class = "feedback_user_name">
+                                    <label class = "visually-hidden" for = "user_name">Ваше имя и фамилия</label>
+                                    <input class = "user-name-feedback" id = "user_name" name = "user_name" type = "text"
+                                        placeholder = "Имя Фамилия" required>
                                 </p>
                                 <p class = "feedback-user-email">
                                     <label class = "visually-hidden" for = "user-email">Ваш имейл адрес</label>
                                     <input class = "user-email-feedback" id = "user-email" name = "email" type = "email"
-                                        placeholder = "email@example.com">
+                                        placeholder = "email@example.com" required>
                                 </p>
                                 <p class = "feedback-about-user-p">
                                     <label class = "visually-hidden" for = "about-user">Расскажите о себе</label>
@@ -328,7 +330,8 @@
                                         placeholder = "В свободной форме"></textarea>
                                 </p>
                                 <p class = "feedback-button">
-                                    <button class = "button button-feedback" type = "submit">Отправить</button>
+                                    <label class = "visually-hidden" for = "sub_form_feedback">Отправить</label>
+                                    <input id = "sub_form_feedback" name = "sub_feedback" class = "button button-feedback" type = "submit" value = "Отправить" form = "feedbackForm">
                                 </p>
                             </form>
                             <button class = "button button-close-feedback" type = "button">
@@ -441,6 +444,15 @@
             </footer>
         </div>
         
-        <script src = "js/script.js"></script>
+        <script src = "js/index_feedback-popup.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=68985a47-960a-4e03-a0ec-021781f84150&lang=ru_RU" type="text/javascript">
+            ymaps.ready(init);
+            function init(){
+                var myMap = new ymaps.Map("map", {
+                    center: [59.93873589, 30.32411152],
+                    zoom: 17
+                });
+            }
+        </script>
     </body>
 </html>
