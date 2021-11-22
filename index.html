@@ -7,6 +7,8 @@
         <link rel = "icon" href = "img/favicon.ico" type = "image/x-icon">
         <link rel = "stylesheet" href = "css/normalize.css">
         <link rel = "stylesheet" href = "/css/index.css">
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=68985a47-960a-4e03-a0ec-021781f84150&lang=ru_RU" type="text/javascript">
+        </script>
         <title>GLLACY</title>
     </head>
     <body>
@@ -294,9 +296,8 @@
                 <section class = "address">
                     <h2 class = "visually-hidden">Карта</h2>
                     <div class = "wrapper-address">
-                        <div id = "map" class = "map_container"></div>
-                        <!-- <img class = "map-ice" src = "/img/map-ice.png" width = "218" height = "80" alt = "ул. Большая Конюшенная 19/8, Санкт-Петербург">
-                        <img src = "img/map.png" class = "img-map" height = "430" alt = "ул. Большая Конюшенная 19/8, Санкт-Петербург"> -->
+                        <div id = "yandex_map" class = "map_container"></div>
+                        <img class = "map-ice visually-hidden" src = "/img/map-ice.png" width = "218" height = "80" alt = "ул. Большая Конюшенная 19/8, Санкт-Петербург">
                         <div class = "address-block">
                             <p class = "address-text">
                                 Адрес главного офиса<br>
@@ -445,14 +446,7 @@
         </div>
         
         <script src = "js/index_feedback-popup.js"></script>
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=68985a47-960a-4e03-a0ec-021781f84150&lang=ru_RU" type="text/javascript">
-            ymaps.ready(init);
-            function init(){
-                var myMap = new ymaps.Map("map", {
-                    center: [59.93873589, 30.32411152],
-                    zoom: 17
-                });
-            }
-        </script>
+        <script src="js/yandexMap.js"></script>
+        <script src="js/mainSlider.js"></script>
     </body>
 </html>
