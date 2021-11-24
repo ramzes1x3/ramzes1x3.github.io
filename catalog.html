@@ -152,66 +152,85 @@
                 </div>
                 <h1 class = "main-title">Сливочное мороженое</h1>
                 <div class = "wrapper-sort">
-                    <form method = "GET" action = "index.html" class = "sorting-form">
+                    <form method = "GET" action = "catalog.html" name = "sorting_form">
                         <div class = "wrapper_sorting_form_row">
                             <fieldset class = "sorting">
                                 <legend class = "sorting-title">Сортировка:</legend>
-                                <ul class = "sorting-list sorting_form_column">
-                                    <li class = "sorting-item">
-                                        <label>
-                                            <input id = "priority1" type = "radio" name = "priority"  value = "top" class = "visually-hidden" checked>
-                                            по популярности
-                                        </label>
+                                <ul class = "wrapper_sorting_list wrapper_sorting_section">
+                                    <li class = "selected_sorting" onclick = "onClickLi()">
+                                        <span class = "about_sort_check">Выберете критерий</span>
+                                        <ul class = "sorting-list sorting_form_column">
+                                            <li class = "sorting-item">
+                                                <label class = "sorting_by_top">
+                                                    <input id = "priority1" type = "radio" name = "priority"  value = "top" class = "visually-hidden" onchange="isCheck()" onclick = "onClickLi()">
+                                                    по популярности
+                                                </label>
+                                            </li>
+                                            <li class = "sorting-item">
+                                                <label class = "sorting_by_poor">
+                                                    <input id = "priority2" type = "radio" name = "priority"  value = "poor" class = "visually-hidden" onchange="isCheck()" onclick = "onClickLi()">
+                                                    сначала недорогие
+                                                </label>
+                                            </li>
+                                            <li class = "sorting-item">
+                                                <label class = "sorting_by_expensive">
+                                                    <input id = "priority3" type = "radio" name = "priority" value = "cheap" class = "visually-hidden" onchange="isCheck()" onclick = "onClickLi()">
+                                                    сначала дорогие
+                                                </label>
+                                            </li>
+                                            <li class = "sorting-item">
+                                                <label class = "sorting_by_fat">
+                                                    <input id = "priority4" type = "radio" name = "priority" value = "fat_content" class = "visually-hidden" onchange="isCheck()" onclick = "onClickLi()">
+                                                    по жирности
+                                                </label>
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li class = "sorting-item">
-                                        <label>
-                                            <input id = "priority2" type = "radio" name = "priority"  value = "poor" class = "visually-hidden">
-                                            сначала недорогие
-                                        </label>
-                                    </li>
-                                    <li class = "sorting-item">
-                                        <label>
-                                            <input id = "priority3" type = "radio" name = "priority" value = "cheap" class = "visually-hidden">
-                                            сначала дорогие
-                                        </label>
-                                    </li>
-                                    <li class = "sorting-item">
-                                        <label>
-                                            <input id = "priority4" type = "radio" name = "priority" value = "fat_content" class = "visually-hidden">
-                                            по жирности
-                                        </label>
-                                    </li>
-                                </ul>
                             </fieldset>
                             <fieldset class = "price-sorting sorting_form_column">
-                                <legend>Цена: 100 руб. - 500 руб.</legend>
-                                <input id = "price" type = "range" name = "price">
+                                <legend>Цена: <span class = "min_value_price">100</span> руб. - 
+                                    <span class = "max_value_price">500</span> руб.</legend>
+                                    <div class = "wrapper_sorting_price wrapper_sorting_section">
+                                        <div class = "range_price">
+                                            <div class = "range_between"></div>
+                                            <button class = "range_btn range_btn_1" type = "text"></button>
+                                            <button class = "range_btn range_btn_2" type = "text"></button>
+                                        </div>
+                                    </div>
+                                    <input id = "min_price" name = "inp_min_price" type = "number" min = "100"
+                                        max = "500" value = "100" class = "visually-hidden">
+                                    <input id = "max_price" name = "inp_max_price" type = "number" min = "100"
+                                        max = "500" value = "500" class = "visually-hidden">
                             </fieldset>
                             <fieldset class = "fat-content-sorting">
                                 <legend>Жирность:</legend>
-                                <ul class = "fat-content-sorting-list sorting_form_column">
+                                <ul class = "fat-content-sorting-list sorting_form_column wrapper_sorting_section">
                                     <li class = "fat-content-sorting-item">
                                         <label>
-                                            <input id = "0" name = "fat" type = "radio" value = "0">
+                                            <input id = "0" name = "fat" type = "radio" value = "0" class = "visually-hidden" checked>
                                             0%
+                                            <div class = "radio_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fat-content-sorting-item">
                                         <label>
-                                            <input id = "10" name = "fat" type = "radio" value = "10" checked>
+                                            <input id = "10" name = "fat" type = "radio" value = "10" class = "visually-hidden">
                                             до 10%
+                                            <div class = "radio_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fat-content-sorting-item">
                                         <label>
-                                            <input id = "30" name = "fat" type = "radio" value = "30">
+                                            <input id = "30" name = "fat" type = "radio" value = "30" class = "visually-hidden">
                                             до 30%
+                                            <div class = "radio_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fat-content-sorting-item">
                                         <label>
-                                            <input id = "30+" name = "fat" type = "radio" value = "30+">
+                                            <input id = "30+" name = "fat" type = "radio" value = "30+" class = "visually-hidden">
                                             выше 30%
+                                            <div class = "radio_check"></div>
                                         </label>
                                     </li>
                                 </ul>
@@ -220,35 +239,40 @@
                         <div class = "wrapper_sorting_form_row">
                             <fieldset class = "fillers-sorting">
                                 <legend>Наполнители:</legend>
-                                <ul class = "fillers-sorting-list sorting_form_column">
+                                <ul class = "fillers-sorting-list sorting_form_column wrapper_sorting_section">
                                     <li class = "fillers-sorting-item">
                                         <label>
-                                            <input id = "chocolate" type = "checkbox" name = "chocolate" checked>
+                                            <input id = "chocolate" type = "checkbox" name = "chocolate"  class = "visually-hidden" checked>
                                             шоколадные
+                                            <div class = "chekcbox_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fillers-sorting-item">
                                         <label>
-                                            <input id = "sugar" type = "checkbox" name = "sugar" checked>
+                                            <input id = "sugar" type = "checkbox" name = "sugar"  class = "visually-hidden" checked>
                                             сахарные присыпки
+                                            <div class = "chekcbox_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fillers-sorting-item">
                                         <label>
-                                            <input id = "fruits" type = "checkbox" name = "fruits">
+                                            <input id = "fruits" type = "checkbox" name = "fruits" class = "visually-hidden">
                                             фрукты
+                                            <div class = "chekcbox_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fillers-sorting-item">
                                         <label>
-                                            <input id = "syrups" type = "checkbox" name = "syrups">
+                                            <input id = "syrups" type = "checkbox" name = "syrups" class = "visually-hidden">
                                             сиропы
+                                            <div class = "chekcbox_check"></div>
                                         </label>
                                     </li>
                                     <li class = "fillers-sorting-item">
                                         <label>
-                                            <input id = "jams" type = "checkbox" name = "jams">
+                                            <input id = "jams" type = "checkbox" name = "jams" class = "visually-hidden">
                                             джемы
+                                            <div class = "chekcbox_check"></div>
                                         </label>
                                     </li>
                                 </ul>
@@ -443,6 +467,7 @@
         </footer>
     </div>
         
-        <script src = "#"></script>
+        <script src = "js/catalog/sortPrice.js"></script>
+        <script src = "js/catalog/sortPriority.js"></script>
     </body>
 </html>

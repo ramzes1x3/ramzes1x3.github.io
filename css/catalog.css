@@ -706,43 +706,65 @@ a{
     justify-content: space-between;
 }
 
-.sorting-list{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 194px;
-    height: 37px;
-    margin: 6px 0 0;
-    background-color: rgba(248, 247, 244, 0.2);
-    border-radius: 25px;
+.wrapper_sorting_form_row > fieldset:not(:last-child){
+    margin-right: 15px;
 }
 
-.sorting-list:hover {
-    overflow: initial;
-}
-
-.sorting-list .sorting-item:first-child{
-    margin-bottom: 25px;
-    padding: 10px 15px 10px 20px;
-}
-
-.sorting-list .sorting-item:not(:first-child){
-    position: relative;
-    margin-bottom: 5px;
-    font-family: inherit;
-    background-color: rgba(248, 247, 244, 0.2);
-}
-
-.sorting-item label{
+.wrapper_sorting_section{
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 25px;
+}
+
+.wrapper_sorting_list{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+  
+.selected_sorting, .sorting-item{
+    position: relative;
+    width: 194px;
+    height: 37px;
+    padding: 10px 0 0 15px;
+    border-radius: 25px;
+}
+
+.sorting-item:active{
+    box-shadow: inset 1px 1px 1px 1px #000000;
+}
+
+.selected_sorting{
+    transition-property: all;
+    transition-duration: .9s;
+}
+
+.selected_sorting{
     color: #ffffff;
 }
 
-.sorting-list::after{
+.sorting-item, .selected_sorting:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.selected_sorting:hover, .sorting-item:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.sorting-item:hover{
+    background-color: #eaeaea;
+}
+
+.sorting-item:hover label{
+    cursor: pointer;
+}
+
+.selected_sorting::after{
     content:"";
     position: absolute;
     width: 11px;
@@ -754,65 +776,179 @@ a{
     background-position: 0 0;
 }
 
-.sorting-list:hover::after{
+.selected_sorting:hover::after{
     background-image: url(/img/icon-down-dir_black.svg);
-}
-
-.sorting-list:hover label{
-    color: #000000;
     cursor: pointer;
 }
 
-.sorting-list:hover .sorting-item:not(:first-child){
+.sorting-list{
+    margin-left: -15px;
+    margin-top: 9px;
+    padding: 0;
+}
+
+.selected_sorting ul{
+    display: none;
+}
+
+.selected_sorting_bl{
+    display: flex !important;
+}
+
+.sorting-item > label{
+    position: relative;
+    display:block;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
     width: 194px;
     height: 37px;
-    padding: 10px 15px 10px 20px;
-    margin: 0;
-    border-radius: 25px;
-    background-color:#ffffff;
-}
-
-.sorting-list:hover li:first-child{
-    margin-bottom: 0;
-    background-color:#ffffff;
     border-radius: 25px;
 }
 
-.sorting-item label:hover{
-    color: #5a5656;
+.price-sorting .wrapper_sorting_price{
+    width: 220px;
+    height: 37px;
+    margin: 6px 0 0;
+    padding: 9px 22px 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+}
+
+.range_price{
+    position: relative;
+    width: 176px;
+    height: 4px;
+    margin: 10px 0 10px 0;
+    background-color: rgba(248, 247, 244, 0.5);
+}
+
+.range_btn {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    background-image: url(/img/range_button_.svg);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.range_btn:hover{
+    width: 20px;
+    height: 22px;
+    box-shadow: 0 0 12px 0 royalblue;
+}
+
+.range_between{
+    position:absolute;
+    height: 4px;
+    width: 0;
+    border: 0;
+    background-color: #ffffff;
 }
 
 .fat-content-sorting-list{
     display: flex;
+    justify-content: space-between;
+    width: 415px;
+    height: 37px;
+    margin: 6px 0 0;
+    padding: 10px 17px 7px 4px;
+}
+
+.fat-content-sorting-item{
+    position: relative;
+    margin-left: 40px;
+}
+
+.radio_check{
+    position: absolute;
+    top:-2px;
+    left: -31px;
+    width: 22px;
+    height: 22px;
+    background-image: url(/img/radio-fat-off.png);
+    opacity: 0.8;
+    border-radius: 25px;
+}
+
+.radio_check:hover{
+    opacity:1;
+    cursor: pointer;
+}
+
+.fat-content-sorting-item input[type="radio"]:checked + .radio_check{
+    background-image: url(/img/radio-fat-on.png);
+}
+
+.fat-content-sorting-item input[type="radio"]:disabled + .radio_check{
+    opacity: 0.4;
 }
 
 .fillers-sorting-list{
     display: flex;
+    justify-content: space-between;
+    width: 703px;
+    height: 37px;
+    margin: 5px 0 0;
+    padding: 9px 20px 8px 50px;
+}
+
+.fillers-sorting-item{
+    position: relative;
+}
+
+.chekcbox_check{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -1px;
+    left: -30px;
+    background-image: url(/img/checkbox-fillers-off.png);
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.chekcbox_check:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fillers-sorting-item input[type="checkbox"]:checked + .chekcbox_check{
+    background-image: url(/img/checkbox-fillers-on.png);
+}
+
+.fillers-sorting-item input[type="checkbox"]:disabled + .chekcbox_check{
+    opacity: 0.4;
 }
 
 .submit-sorting{
-    display: inline-flex;
-}
-
-.sorting-form legend{
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.fat-content-sorting-list li, .fillers-sorting-list li{
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.submit-sorting{
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     color: #ffffff;
+    width: 144px;
+    height: 37px;
+    margin: 23px 0 0 13px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 2px #ffffff;
+}
+
+.submit-sorting:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+    color:#000000;
+}
+
+.submit-sorting:active{
+    background-color: #eaeaea;
+    cursor: pointer;
+    color:#000000;
+    box-shadow: inset 1px 2px 0 0 #cccccc;
+    border: none;
 }
 
 .wrapper-assortment{
