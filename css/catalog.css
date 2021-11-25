@@ -956,6 +956,7 @@ a{
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .assortment a{
@@ -972,22 +973,156 @@ a{
     color: #ffffff;
 }
 
-.assortiment .weight{
+.price > .weight{
     font-size: 30px;
     line-height: 45px;
 }
 
-.pagination-list{
-    display: flex;
-    justify-content: flex-end;
+.wrapper-assortment > li{
+    position: relative;
 }
 
-.pagination-list li{
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
-    color: #ffffff;
+.wrapper-assortment > li{
+    margin-bottom: 40px;
 }
+
+.wrapper-assortment figure{
+    margin: 0;
+    padding: 0;
+}
+
+.price{
+    position: absolute;
+    top: 210px;
+    left: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-assortment > li:hover{
+    cursor: pointer;
+}
+
+.wrapper-assortment > li:hover{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 293px;
+    height: 400px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.ice_item > figcaption{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.about_ice > a:hover{
+    color:#ffbc9e;
+}
+
+.button_add_box{
+    display: none;
+    background-image: linear-gradient(to top, #e74a35, #f26843);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    width: 200px;
+    height: 44px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
+    margin-top: 10px;
+    margin-left: 32px;
+}
+
+.button_add_box:hover{
+    background-image: linear-gradient(to bottom, #fff3, #fff3), linear-gradient(to top, #e74a35, #f26843);
+    cursor: pointer; 
+}
+
+.button_add_box:active{
+    cursor: pointer;
+    box-shadow: inset 0px 2px 2px 0 #942718;
+    background-image: linear-gradient(to bottom, #0001, #0001), linear-gradient(to top, #e74a35, #f26843);
+}
+
+.wrapper-assortment > li:hover .button_add_box{
+    display: block;
+}
+
+.pagination-list{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+
+.pagination-list::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 60px;
+    background-color:  rgba(255, 255, 255, 0.2);
+}
+
+.pag_btn{
+    display: none;
+}
+
+input[id="prev_page"]:disabled +.prev_indicator .prev_icon path{
+    opacity: 0.2;
+}
+
+input[id="next_page"]:disabled +.prev_indicator .prev_icon path{
+    opacity: 0.2;
+}
+
+.prev_indicator, .page_indicator{
+    margin-right: 15px;
+}
+
+.prev_indicator, .page_indicator, .next_indicator{
+    border-radius: 25px;
+    border: none;
+    width: 26px;
+    height: 27px;
+    margin-left: 5px;
+    background-color: rgba(255, 255, 255, 0.0);
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.prev_indicator:hover, .page_indicator:hover, .next_indicator:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.prev_indicator:active, .page_indicator:active, .next_indicator:active{
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.next_indicator:active .next_icon path{
+    fill: #000000;
+}
+
+.prev_indicator:active .prev_icon path{
+    fill:rgba(0, 0, 0,1);
+}
+
+.pagination-list input[name="number_of_page"]:checked + .page_indicator{
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
 /*main*/
 
 /*footer*/
@@ -1083,4 +1218,4 @@ a{
 .footer a:hover{
     color: #ffbc9e;
 }
-/*footer*/
+/*footer*/ 
