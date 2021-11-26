@@ -61,6 +61,9 @@ function delItems(iceClass) {
 }
 
 window.onload = function() {
+    document.querySelector('.catalog-navigation-item').style.background = "#d07058";
+    document.querySelector('.catalog-navigation-item').style.color = "#ffffff";
+
     function addItem() {
         for(var i = 0; i < iceItem.length; i++){
             if(iceItem[i].className == this.value){
