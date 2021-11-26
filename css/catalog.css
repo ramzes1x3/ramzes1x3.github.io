@@ -472,20 +472,33 @@ a{
     height: 20px;
 }
 
-.user-navigation-button-basket .text-void-basket{
-    display: none;
+.user-navigation-button-basket:hover{
+    color: #323232 !important;
+    background-color: #f8f7f4 !important;
 }
 
-.user-navigation-button-basket{
-    color: #323232;
-    background-color: #f8f7f4;
-}
-
-.user-navigation-button-basket .text-full-basket{
-    display: inline;
+.ice_in_basket_icon{
+    position: absolute;
+    overflow: hidden;
+    width: 21px;
+    height: 20px;
+    background-image: url(/img/basket-hover.svg);
+    left: 15px;
+    top: 7px;
 }
 
 .user-navigation-button-basket::before{
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    width: 21px;
+    height: 20px;
+    background-image: url(/img/basket.svg);
+    left: 15px;
+    top: 7px;
+}
+
+.user-navigation-button-basket:hover::before{
     content: "";
     position: absolute;
     overflow: hidden;
@@ -513,6 +526,7 @@ a{
     top: 40px;
     transition-delay: 0.2s;
     box-shadow: 0px 20px 20px 0 #0006;
+    padding-bottom: 10px;
 }
 
 .user-navigation-button-basket:hover .wrapper-basket{
@@ -520,12 +534,12 @@ a{
     transition-delay: 0s;
 }
 
-.basket-list::after{
+.basket_list::after{
     content: "";
     display: block;
     position: absolute;
     left: 15px;
-    top: 140px;
+    top: 150px;
     width: 94%;
     height: 1px;
     background-color: #cacac7;
@@ -535,32 +549,87 @@ a{
     text-align: right;
 }
 
-.basket-list{
+.basket_list{
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
     color: #323232;
     display: flex;
     flex-wrap: wrap;
-    height: 60%;
+    align-items: flex-start;
+    min-height: 60%;
+    max-height: 60%;
+    overflow-y: auto;
+    padding-top: 10px;
+}
+
+.basket_img{
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 15px;
+    width: 33px;
+    height: 33px;
 }
 
 .basket-img1{
     background-image: url(/img/1.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 15px;
-    width: 33px;
-    height: 33px;
 }
 
 .basket-img2{
+    background-image: url(/img/2.webp);;
+}
+
+.basket-img3{
     background-image: url(/img/3.webp);
-    background-repeat: no-repeat;
-    background-size:cover;
-    border-radius: 15px;
-    width: 33px;
-    height: 33px;
+}
+
+.basket-img4{
+    background-image: url(/img/4.webp);
+}
+
+.basket-img5{
+    background-image: url(/img/21.webp);
+}
+
+.basket-img6{
+    background-image: url(/img/22.webp);
+}
+
+.basket-img7{
+    background-image: url(/img/23.webp);
+}
+
+.basket-img8{
+    background-image: url(/img/24.webp);
+}
+
+.basket-img9{
+    background-image: url(/img/31.webp);
+}
+
+.basket-img10{
+    background-image: url(/img/32.webp);
+}
+
+.basket-img11{
+    background-image: url(/img/33.webp);
+}
+
+.basket-img12{
+    background-image: url(/img/34.webp);
+}
+
+.no_product_in_basket{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner{
+    font-size: 30px;
+    opacity: 0.2;
 }
 
 .basket-item{
@@ -573,14 +642,34 @@ a{
 }
 
 .button-basket{
-    position: absolute;
-    left: 15px;
-    width: 12px;
-    height: 12px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color:#f8f7f4;
 }
 
-.button-basket:hover polygon{
-    fill:#1adbd1;
+.button-basket::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: #000000;
+    transform: rotate(45deg);
+    left: -5px;
+}
+
+.button-basket::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background-color: #000000;
+    transform: rotate(-45deg);
+    left: -5px;
+}
+
+.button-basket:hover::before, .button-basket:hover::after{
+    background-color:#1adbd1;
 }
 
 .basket-item-row{
@@ -980,9 +1069,6 @@ a{
 
 .wrapper-assortment > li{
     position: relative;
-}
-
-.wrapper-assortment > li{
     margin-bottom: 40px;
 }
 
@@ -1011,6 +1097,7 @@ a{
     height: 400px;
     padding-top: 5px;
     cursor: pointer;
+    border-radius: 25px;
 }
 
 .ice_item > figcaption{
@@ -1122,7 +1209,6 @@ input[id="next_page"]:disabled +.prev_indicator .prev_icon path{
     background-color: rgba(255, 255, 255, 1);
     cursor: pointer;
 }
-
 /*main*/
 
 /*footer*/
