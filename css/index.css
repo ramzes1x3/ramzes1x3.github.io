@@ -244,7 +244,7 @@ a{
     top: 40px;
     right: 87%;
     visibility: hidden;
-    transition-delay: 0.2s;
+    transition-delay: 1s;
     box-shadow: 0px 20px 20px 0 #0006;
 }
 
@@ -386,7 +386,8 @@ a{
     top: 40px;
     right: 0;
     box-shadow: 0px 20px 20px 0 #0006;
-    transition-delay: 0.2s;
+    transition-delay: 1s;
+    z-index: 1;
 }
 
 .user-navigation-button-join:hover .wrapper-personal-account{
@@ -515,6 +516,7 @@ a{
     top: 40px;
     transition-delay: 0.2s;
     box-shadow: 0px 20px 20px 0 #0006;
+    z-index: 2;
 }
 
 .user-navigation-button-basket:hover .wrapper-basket{
@@ -898,7 +900,8 @@ a{
 .assortment-item:hover{
     box-shadow: 0px 20px 20px 0 #0006;
     background-color: rgba(248, 247, 244, 0.2);
-    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 30px;
 }
 
 .assortment-item:hover img{

@@ -250,7 +250,7 @@ a{
     top: 40px;
     right: 87%;
     visibility: hidden;
-    transition-delay: 0.2s;
+    transition-delay: 1s;
     box-shadow: 0px 20px 20px 0 #0006;
 }
 
@@ -392,12 +392,14 @@ a{
     top: 40px;
     right: 0;
     box-shadow: 0px 20px 20px 0 #0006;
-    transition-delay: 0.2s;
+    transition-delay: 1s;
+    z-index: 1;
 }
 
 .user-navigation-button-join:hover .wrapper-personal-account{
     visibility: visible;
     transition-delay: 0s;
+    z-index: 1;
 }
 
 .personal-link-row{
@@ -524,14 +526,16 @@ a{
     position: absolute;
     right: 0;
     top: 40px;
-    transition-delay: 0.2s;
+    transition-delay: 1s;
     box-shadow: 0px 20px 20px 0 #0006;
     padding-bottom: 10px;
+    z-index: 1;
 }
 
 .user-navigation-button-basket:hover .wrapper-basket{
     visibility: visible;
     transition-delay: 0s;
+    z-index: 1;
 }
 
 .basket_list::after{
@@ -806,12 +810,13 @@ a{
     line-height: 18px;
     background-color: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    border-radius: 25px;
+    border-radius: 20px;
 }
 
 .wrapper_sorting_list{
     margin-top: 5px;
     margin-bottom: 5px;
+    z-index: 1;
 }
   
 .selected_sorting, .sorting-item{
@@ -882,6 +887,11 @@ a{
 
 .selected_sorting_bl{
     display: flex !important;
+    flex-direction: column;
+}
+
+.sorting-item {
+    z-index: 1;
 }
 
 .sorting-item > label{
@@ -1201,7 +1211,7 @@ input[id="next_page"]:disabled +.prev_indicator .prev_icon path{
 }
 
 .prev_indicator:active .prev_icon path{
-    fill:rgba(0, 0, 0,1);
+    fill: #000000;
 }
 
 .pagination-list input[name="number_of_page"]:checked + .page_indicator{

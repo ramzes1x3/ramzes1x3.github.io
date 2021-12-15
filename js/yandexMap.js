@@ -11,7 +11,7 @@ function init(){
     });
 
     placemark = new ymaps.Placemark([59.93882521, 30.32288495], {
-        hintContent: "Магазин Gllacy",//здесь можно верстать стили
+        hintContent: "Магазин Gllacy",
         balloonContent: "ул. Большая Конюшенная 19/8,<br> Санкт-Петербург"
     },
     {
