@@ -1172,11 +1172,11 @@ a{
 }
 
 input[id="prev_page"]:disabled +.prev_indicator .prev_icon path{
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 input[id="next_page"]:disabled +.prev_indicator .prev_icon path{
-    opacity: 0.2;
+    opacity: 0.3;
 }
 
 .prev_indicator, .page_indicator{
